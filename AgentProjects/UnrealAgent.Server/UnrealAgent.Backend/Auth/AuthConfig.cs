@@ -44,6 +44,8 @@ public sealed class AuthConfig
             Directory.CreateDirectory(Dir);
         JsonObject Root = new() { ["api_Key"] = ApiKey };
         File.WriteAllText(ConfigPath, Root.ToJsonString(JsonOptions));
+        
+        UpdateClient();
     }
 
     public void Load()
@@ -56,6 +58,14 @@ public sealed class AuthConfig
         if (Root is null) return;
         
         ApiKey = Root["api_Key"]?.GetValue<string>();
+        UpdateClient();
     }
 
+    /// <summary> API Key로 AnthropicClient를 생성합니다. </summary>
+    private void UpdateClient()
+    {
+        Client = ApiKey is not null
+            ? new AnthropicClient { ApiKey = ApiKey }
+            : null;
+    }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Anthropic.Models.Messages;
+using Microsoft.Extensions.DependencyInjection;
 using UnrealAgent.Backend.Auth;
 
 ServiceCollection Services = new ServiceCollection();
@@ -22,4 +23,19 @@ if (!Auth.IsApiKeyConfigured())
     
     Auth.SetApiKey(Key);
     Console.WriteLine("API Key 저장 완료!");
+}
+
+MessageCreateParams Parameters = new MessageCreateParams
+{
+    Model = "claude-opus-4-6",
+    MaxTokens = 1024,
+    Messages = [new() {Role = Role.User, Content = "안녕하세요? 간단히 자기소개 해주세요."}]
+};
+
+Message Response = await Auth.Client!.Messages.Create(Parameters);
+
+foreach (ContentBlock Block in Response.Content)
+{
+    if(Block.TryPickText(out var Text))
+        Console.WriteLine(Text.Text);
 }
