@@ -15,9 +15,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a24f1e12-9561-45e1-95fe-6ed92ee40354" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Conversation/ApiStreamSpan.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Core/Block.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Core/ChatEvent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealAgent.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealAgent.Server/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/Program.cs" afterDir="false" />
     </list>
@@ -36,7 +33,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1bfe2af244202d0afbe8c180e644c1dfe7ec544f9114dab7fb55571122a13b/ApiEnum.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/425b79b42021a17a211653dfafba6f23a17ab97a2b917e82265f8517649f4640/ThinkingDelta.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/999a3bf9bf483a0bbd5898983825ca1912177f15d348f2694c48f9677fe7/FrozenDictionaryConverterFactory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Auth/AuthConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Conversation/ApiStreamSpan.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Core/Block.cs" root0="FORCE_HIGHLIGHTING" />
@@ -194,7 +193,7 @@
       <workItem from="1782721070515" duration="79000" />
       <workItem from="1782721163895" duration="674000" />
       <workItem from="1782722220152" duration="4361000" />
-      <workItem from="1783386471861" duration="5705000" />
+      <workItem from="1783386471861" duration="12488000" />
     </task>
     <servers />
   </component>

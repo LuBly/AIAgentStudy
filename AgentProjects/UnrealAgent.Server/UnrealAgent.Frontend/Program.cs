@@ -61,20 +61,6 @@ while (true)
                 break;
         }
     }
-    Console.WriteLine("\n--- 완료된 블록 ---");
-    foreach (Block B in Span.Blocks)
-    {
-        switch (B)
-        {
-            case Block.Thinking T :
-                Console.WriteLine($"Thinking : {T.Content} {T.Signature}");
-                break;
-            case Block.Text T :
-                Console.WriteLine($"Text : {T.Content}");
-                break;
-        }
-    }
-    
     Console.WriteLine();
 }
 
