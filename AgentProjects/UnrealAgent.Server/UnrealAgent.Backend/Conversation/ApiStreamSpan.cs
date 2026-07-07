@@ -18,7 +18,16 @@ public sealed class ApiStreamSpan
         
         /// <summary> 사고 과정(Extended Thinking) 응답 블록 </summary>
         public sealed record Thinking :  ActiveBlock;
-    } 
+    }
+
+    public abstract record Result
+    {
+        /// <summary> 응답/사고가 잘려서 이어서 생성해야 합니다. 도구 실행 없이 다음 API 호출로 이어갑니다. </summary>
+        public sealed record Continue(AssistantSpan CompletedSpan) : Result;
+        
+        /// <summary> 대화가 완료되었습니다. </summary>
+        public sealed record EndSpan(AssistantSpan CompletedSpan) : Result;
+    }
     
     
     // ── 스트리밍 중 상태 ──
@@ -160,4 +169,17 @@ public sealed class ApiStreamSpan
         return null;
     }
 
+    /// <summary>
+    /// 스트리밍을 완료하고 AssistantSpan을 생성
+    /// 반환값으로 다음 행동 ( 도구 실행, 이어서 호출, 종료 ) 등을 결정
+    /// </summary>
+    public Result Complete()
+    {
+        AssistantSpan CompleteSpan = new()
+        {
+            AssistantBlocks = AssistantBlocks.ToList(),
+        };
+
+        return new Result.EndSpan(CompleteSpan);
+    }
 }

@@ -1,15 +1,17 @@
 ﻿using Anthropic.Models.Messages;
 using Microsoft.Extensions.DependencyInjection;
+using UnrealAgent.Backend.Agent;
 using UnrealAgent.Backend.Auth;
 using UnrealAgent.Backend.Conversation;
 using UnrealAgent.Backend.Core;
-using Block = UnrealAgent.Backend.Core.Block;
 
 ServiceCollection Services = new ServiceCollection();
 Services.AddSingleton<AuthConfig>();
+Services.AddSingleton<AgentSession>();
 
 ServiceProvider Provider = Services.BuildServiceProvider();
 AuthConfig Auth = Provider.GetRequiredService<AuthConfig>();
+AgentSession AgentSession = Provider.GetRequiredService<AgentSession>();
 
 Auth.Load();
 
@@ -30,28 +32,32 @@ if (!Auth.IsApiKeyConfigured())
 
 while (true)
 {
+    // 사용자 입력 대기
     Console.Write("\n> ");
     string? Input = Console.ReadLine();
 
     if (string.IsNullOrWhiteSpace(Input))
         continue;
+    if (Input.Equals("quit", StringComparison.OrdinalIgnoreCase))
+        break;
+    
+    // 대화 히스토리에 사용자 입력 추가
+    MessageSpan CurrentMessageSpan = AgentSession.Conversation.AddMessageSpan(Input);
     
     MessageCreateParams Parameters = new MessageCreateParams
     {
         Model = "claude-opus-4-6",
         MaxTokens = 1024,
-        Messages = [new() {Role = Role.User, Content = Input}],
+        Messages = AgentSession.Conversation.ToAnthropicMessages(),
         Thinking = new ThinkingConfigAdaptive(),
-        OutputConfig = new OutputConfig()
-        {
-            Effort = Effort.High
-        }
+        OutputConfig = new OutputConfig() { Effort = Effort.High }
     };
 
-    ApiStreamSpan Span = new ApiStreamSpan();
+    // 스트리밍 응답 수신 및 출력
+    ApiStreamSpan ApiStreamSpan = new ApiStreamSpan();
     await foreach (RawMessageStreamEvent Event in Auth.Client!.Messages.CreateStreaming(Parameters))
     {
-        switch (Span.Process(Event))
+        switch (ApiStreamSpan.Process(Event))
         {
             case ChatEvent.Text Txt :
                 Console.Write(Txt.Content);
@@ -61,6 +67,17 @@ while (true)
                 break;
         }
     }
+    
+    // 완료된 응답을 대화 히스토리에 저장
+    switch (ApiStreamSpan.Complete())
+    {
+        case ApiStreamSpan.Result.EndSpan { CompletedSpan: { } AssistantSpan }:
+        {
+            CurrentMessageSpan.AssistantSpans.Add(AssistantSpan);
+            break;
+        }
+    }
+    
     Console.WriteLine();
 }
 

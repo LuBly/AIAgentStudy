@@ -15,7 +15,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a24f1e12-9561-45e1-95fe-6ed92ee40354" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Agent/AgentSession.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Conversation/AssistantSpan.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Conversation/Conversation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Conversation/MessageSpan.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Conversation/UserInput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealAgent.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealAgent.Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnrealAgent.Backend/Conversation/ApiStreamSpan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Conversation/ApiStreamSpan.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +42,13 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1bfe2af244202d0afbe8c180e644c1dfe7ec544f9114dab7fb55571122a13b/ApiEnum.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/425b79b42021a17a211653dfafba6f23a17ab97a2b917e82265f8517649f4640/ThinkingDelta.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/999a3bf9bf483a0bbd5898983825ca1912177f15d348f2694c48f9677fe7/FrozenDictionaryConverterFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Agent/AgentSession.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Auth/AuthConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Conversation/ApiStreamSpan.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Conversation/AssistantSpan.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Conversation/Conversation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Conversation/MessageSpan.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Conversation/UserInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Core/Block.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Core/ChatEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Frontend/Program.cs" root0="FORCE_HIGHLIGHTING" />
@@ -48,61 +59,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0847426824909207E-9" />
-      <entry key="MS500" value="0.016110491348372582" />
-      <entry key="S2" value="0.42720878307426235" />
-      <entry key="S5" value="2.8507717826306984" />
-      <entry key="S10" value="9.500284084154684" />
-      <entry key="S30" value="23.994341553775214" />
-      <entry key="S60" value="31.57456181530184" />
-      <entry key="M2" value="40.58084951383427" />
-      <entry key="M5" value="64.46809604195013" />
-      <entry key="M10" value="113.95908002247468" />
-      <entry key="M15" value="166.61959188089588" />
-      <entry key="M30" value="297.78754405472625" />
-      <entry key="H1" value="461.23865115492885" />
-      <entry key="H2" value="613.8299188959029" />
-      <entry key="H4" value="724.1609517812498" />
-      <entry key="D1" value="841.9441588078976" />
-      <entry key="W1" value="865.055416216412" />
+      <entry key="MS100" value="1.0000000000001192" />
+      <entry key="MS500" value="1.0026054281310262" />
+      <entry key="S2" value="1.2728993288517394" />
+      <entry key="S5" value="2.004576993626818" />
+      <entry key="S10" value="2.947273672387136" />
+      <entry key="S30" value="6.749498189773702" />
+      <entry key="S60" value="20.578528318029477" />
+      <entry key="M2" value="52.009531029760666" />
+      <entry key="M5" value="110.84687858693941" />
+      <entry key="M10" value="167.91604821458486" />
+      <entry key="M15" value="207.56957997270734" />
+      <entry key="M30" value="275.36733098904904" />
+      <entry key="H1" value="340.15418973010543" />
+      <entry key="H2" value="461.78068278225123" />
+      <entry key="H4" value="673.283904199956" />
+      <entry key="D1" value="1121.501154211839" />
+      <entry key="W1" value="1247.1029998895433" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0000078438860065" />
-      <entry key="MS500" value="1.0952970424429698" />
-      <entry key="S2" value="1.6340632631490173" />
-      <entry key="S5" value="2.151862388417335" />
-      <entry key="S10" value="2.4902418227911136" />
-      <entry key="S30" value="2.8494902633764907" />
-      <entry key="S60" value="3.6224313984705385" />
-      <entry key="M2" value="6.41508593953964" />
-      <entry key="M5" value="14.383314128150197" />
-      <entry key="M10" value="25.802671927167168" />
-      <entry key="M15" value="36.40196872983841" />
-      <entry key="M30" value="62.76721706740022" />
-      <entry key="H1" value="97.66140295046789" />
-      <entry key="H2" value="131.47874598178953" />
-      <entry key="H4" value="156.26805408477819" />
-      <entry key="D1" value="182.8762673209084" />
-      <entry key="W1" value="188.1070137353141" />
+      <entry key="MS100" value="7.227499802162163E-7" />
+      <entry key="MS500" value="0.05912860292035184" />
+      <entry key="S2" value="0.49333051571072567" />
+      <entry key="S5" value="0.7877316591242028" />
+      <entry key="S10" value="1.0528522182216233" />
+      <entry key="S30" value="1.6683113287798652" />
+      <entry key="S60" value="2.8051540883421873" />
+      <entry key="M2" value="5.687003206130268" />
+      <entry key="M5" value="14.22338679106699" />
+      <entry key="M10" value="26.83419304770591" />
+      <entry key="M15" value="36.203197387032596" />
+      <entry key="M30" value="51.821500291994035" />
+      <entry key="H1" value="66.03904532296094" />
+      <entry key="H2" value="92.15557469556813" />
+      <entry key="H4" value="137.88369973531007" />
+      <entry key="D1" value="235.52838275100402" />
+      <entry key="W1" value="262.9903758150958" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="9.268590647827528E-6" />
-      <entry key="MS500" value="0.12131905224954842" />
-      <entry key="S2" value="1.2081828177306158" />
-      <entry key="S5" value="4.347366490916913" />
-      <entry key="S10" value="11.532193085562405" />
-      <entry key="S30" value="26.639745079897008" />
-      <entry key="S60" value="35.06696426325582" />
-      <entry key="M2" value="46.876750653343" />
-      <entry key="M5" value="78.72556599809302" />
-      <entry key="M10" value="139.63831406271137" />
-      <entry key="M15" value="202.9018451160264" />
-      <entry key="M30" value="360.45007850340016" />
-      <entry key="H1" value="558.8199909025241" />
-      <entry key="H2" value="745.255786196011" />
-      <entry key="H4" value="880.3979581865267" />
-      <entry key="D1" value="1024.814437156559" />
-      <entry key="W1" value="1053.1615516492373" />
+      <entry key="MS100" value="7.800123165335055E-7" />
+      <entry key="MS500" value="0.06397506511621964" />
+      <entry key="S2" value="0.9202634528194592" />
+      <entry key="S5" value="2.1263156879042246" />
+      <entry key="S10" value="3.495351592035567" />
+      <entry key="S30" value="8.157138572920852" />
+      <entry key="S60" value="23.192687551871767" />
+      <entry key="M2" value="57.53607956836414" />
+      <entry key="M5" value="124.93697606649349" />
+      <entry key="M10" value="194.62949483221007" />
+      <entry key="M15" value="243.66377286391455" />
+      <entry key="M30" value="327.10950793138824" />
+      <entry key="H1" value="406.1419035728298" />
+      <entry key="H2" value="553.8999965421193" />
+      <entry key="H4" value="811.1403916502247" />
+      <entry key="D1" value="1357.0218177231056" />
+      <entry key="W1" value="1510.0921459347776" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -114,31 +125,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET 프로젝트.UnrealAgent.Frontend.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMConfigurable&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET 프로젝트.UnrealAgent.Frontend.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "CodeLensConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET 프로젝트.UnrealAgent.Frontend">
     <configuration name="ConsoleApp1" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -193,7 +204,7 @@
       <workItem from="1782721070515" duration="79000" />
       <workItem from="1782721163895" duration="674000" />
       <workItem from="1782722220152" duration="4361000" />
-      <workItem from="1783386471861" duration="12488000" />
+      <workItem from="1783386471861" duration="15888000" />
     </task>
     <servers />
   </component>
