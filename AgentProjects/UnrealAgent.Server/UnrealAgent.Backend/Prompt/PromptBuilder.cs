@@ -26,6 +26,7 @@ public sealed class PromptBuilder
     {
       Model = "claude-opus-4-6",
       MaxTokens = 1024,
+      CacheControl = new CacheControlEphemeral(),
       System = new List<TextBlockParam>
       {
         new() { Text = BuildSystemPrompt(session) }
@@ -35,8 +36,7 @@ public sealed class PromptBuilder
       OutputConfig = new OutputConfig()
       {
         Effort = Effort.High
-      },
-      
+      }
     };
     
     // ── 시스템 프롬프트 구성 ──
