@@ -4,14 +4,17 @@ using UnrealAgent.Backend.Agent;
 using UnrealAgent.Backend.Auth;
 using UnrealAgent.Backend.Conversation;
 using UnrealAgent.Backend.Core;
+using UnrealAgent.Backend.Prompt;
 
 ServiceCollection Services = new ServiceCollection();
 Services.AddSingleton<AuthConfig>();
 Services.AddSingleton<AgentSession>();
+Services.AddSingleton<PromptBuilder>();
 
 ServiceProvider Provider = Services.BuildServiceProvider();
 AuthConfig Auth = Provider.GetRequiredService<AuthConfig>();
 AgentSession AgentSession = Provider.GetRequiredService<AgentSession>();
+PromptBuilder PromptBulider = Provider.GetRequiredService<PromptBuilder>();
 
 Auth.Load();
 
@@ -43,15 +46,8 @@ while (true)
     
     // 대화 히스토리에 사용자 입력 추가
     MessageSpan CurrentMessageSpan = AgentSession.Conversation.AddMessageSpan(Input);
-    
-    MessageCreateParams Parameters = new MessageCreateParams
-    {
-        Model = "claude-opus-4-6",
-        MaxTokens = 1024,
-        Messages = AgentSession.Conversation.ToAnthropicMessages(),
-        Thinking = new ThinkingConfigAdaptive(),
-        OutputConfig = new OutputConfig() { Effort = Effort.High }
-    };
+
+    MessageCreateParams Parameters = PromptBulider.Build(AgentSession);
 
     // 스트리밍 응답 수신 및 출력
     ApiStreamSpan ApiStreamSpan = new ApiStreamSpan();
@@ -62,9 +58,9 @@ while (true)
             case ChatEvent.Text Txt :
                 Console.Write(Txt.Content);
                 break;
-            case ChatEvent.Thinking Think :
-                Console.Write(Think.Content);
-                break;
+            // case ChatEvent.Thinking Think :
+            //     Console.Write(Think.Content);
+            //     break;
         }
     }
     
