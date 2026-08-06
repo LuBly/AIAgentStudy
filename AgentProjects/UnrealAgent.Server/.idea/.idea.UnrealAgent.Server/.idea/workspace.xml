@@ -14,7 +14,12 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a24f1e12-9561-45e1-95fe-6ed92ee40354" name="변경" comment="" />
+    <list default="true" id="a24f1e12-9561-45e1-95fe-6ed92ee40354" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Tool/Attributes/AgentToolAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Tool/IAgentTool.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Tool/ToolResult.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealAgent.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealAgent.Server/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,12 +34,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/LuBly/AIAgentStudy.git",
-    "accountId": "bcdc5ec2-9816-4319-9a0e-63a76308311c"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;LuBly&quot;
   }
-}]]></component>
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/LuBly/AIAgentStudy.git&quot;,
+    &quot;accountId&quot;: &quot;bcdc5ec2-9816-4319-9a0e-63a76308311c&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1bfe2af244202d0afbe8c180e644c1dfe7ec544f9114dab7fb55571122a13b/ApiEnum.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/425b79b42021a17a211653dfafba6f23a17ab97a2b917e82265f8517649f4640/ThinkingDelta.cs" root0="SKIP_HIGHLIGHTING" />
@@ -49,69 +60,72 @@
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Core/Block.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Core/ChatEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Prompt/PromptBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Tool/IAgentTool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Tool/ToolResult.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Frontend/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.024339578258132" />
-      <entry key="MS500" value="1.7435357140074155" />
-      <entry key="S2" value="3.2141604910178962" />
-      <entry key="S5" value="5.2013679079882795" />
-      <entry key="S10" value="7.338974092030967" />
-      <entry key="S30" value="10.136526213483386" />
-      <entry key="S60" value="11.319032856885624" />
-      <entry key="M2" value="12.592767431778292" />
-      <entry key="M5" value="16.670076946868512" />
-      <entry key="M10" value="32.58361943317428" />
-      <entry key="M15" value="62.13193846972069" />
-      <entry key="M30" value="168.98821068452804" />
-      <entry key="H1" value="324.46519506736536" />
-      <entry key="H2" value="521.3957738238084" />
-      <entry key="H4" value="786.0462622589226" />
-      <entry key="D1" value="1334.6508165345067" />
-      <entry key="W1" value="1492.095552277999" />
+      <entry key="MS100" value="1.0000618871752802" />
+      <entry key="MS500" value="1.1439859552955687" />
+      <entry key="S2" value="1.6171729161926254" />
+      <entry key="S5" value="1.8910937302000947" />
+      <entry key="S10" value="2.16702107644522" />
+      <entry key="S30" value="2.698167813080196" />
+      <entry key="S60" value="4.568611057998371" />
+      <entry key="M2" value="13.291766781260458" />
+      <entry key="M5" value="42.4245006216293" />
+      <entry key="M10" value="75.91327431892825" />
+      <entry key="M15" value="105.26540568834784" />
+      <entry key="M30" value="202.03700100196383" />
+      <entry key="H1" value="362.8982581685088" />
+      <entry key="H2" value="576.8043192399736" />
+      <entry key="H4" value="858.8928236636882" />
+      <entry key="D1" value="1445.6085504178225" />
+      <entry key="W1" value="1615.6918053684803" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="6.843817718563518E-267" />
-      <entry key="MS500" value="5.848704596222895E-54" />
-      <entry key="S2" value="4.917732727477574E-14" />
-      <entry key="S5" value="4.750135176320806E-6" />
-      <entry key="S10" value="0.0021794804831246476" />
-      <entry key="S30" value="0.12966274834936636" />
-      <entry key="S60" value="0.3652926416990402" />
-      <entry key="M2" value="0.7250337494337982" />
-      <entry key="M5" value="1.8621326598454508" />
-      <entry key="M10" value="5.516891850722402" />
-      <entry key="M15" value="11.331995735927102" />
-      <entry key="M30" value="31.211004645725044" />
-      <entry key="H1" value="60.132180705326675" />
-      <entry key="H2" value="98.56450757981193" />
-      <entry key="H4" value="153.14437855936535" />
-      <entry key="D1" value="269.887214282008" />
-      <entry key="W1" value="303.76867578705156" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="1.2629487931808198E-128" />
+      <entry key="S2" value="1.0621724511015507E-32" />
+      <entry key="S5" value="1.8251189629993618E-13" />
+      <entry key="S10" value="6.825133939837179E-7" />
+      <entry key="S30" value="0.02736810139773278" />
+      <entry key="S60" value="0.45492919543551136" />
+      <entry key="M2" value="2.109338425062693" />
+      <entry key="M5" value="6.38515013413921" />
+      <entry key="M10" value="11.198991930340254" />
+      <entry key="M15" value="15.994654199364453" />
+      <entry key="M30" value="33.07636532127554" />
+      <entry key="H1" value="62.45393389505366" />
+      <entry key="H2" value="103.52658326553704" />
+      <entry key="H4" value="160.96346133502067" />
+      <entry key="D1" value="284.8791390564512" />
+      <entry key="W1" value="321.28424531057993" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.002937374515607" />
-      <entry key="MS500" value="1.7351705190610418" />
-      <entry key="S2" value="3.20120149610283" />
-      <entry key="S5" value="5.172971731453634" />
-      <entry key="S10" value="7.3142055704635665" />
-      <entry key="S30" value="10.250506870478615" />
-      <entry key="S60" value="11.67378478370958" />
-      <entry key="M2" value="13.308869394990984" />
-      <entry key="M5" value="18.520106011533493" />
-      <entry key="M10" value="38.07709041914731" />
-      <entry key="M15" value="73.42966276089109" />
-      <entry key="M30" value="200.15041830324037" />
-      <entry key="H1" value="384.54988598652426" />
-      <entry key="H2" value="619.92112572911" />
-      <entry key="H4" value="939.1602141980668" />
-      <entry key="D1" value="1604.5291410894474" />
-      <entry key="W1" value="1795.8628008601806" />
+      <entry key="MS100" value="7.503236859189521E-5" />
+      <entry key="MS500" value="0.24325657139636006" />
+      <entry key="S2" value="1.1773233702742236" />
+      <entry key="S5" value="1.6728946270124199" />
+      <entry key="S10" value="2.0345276079171644" />
+      <entry key="S30" value="2.6648171738320934" />
+      <entry key="S60" value="4.967784101894759" />
+      <entry key="M2" value="15.328849405292491" />
+      <entry key="M5" value="48.73519425533176" />
+      <entry key="M10" value="87.05174949352484" />
+      <entry key="M15" value="121.20482756727364" />
+      <entry key="M30" value="235.05905228843667" />
+      <entry key="H1" value="425.3018088762914" />
+      <entry key="H2" value="680.2893273215727" />
+      <entry key="H4" value="1019.8240939072451" />
+      <entry key="D1" value="1730.4782694910627" />
+      <entry key="W1" value="1936.9745358902514" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -203,7 +217,8 @@
       <workItem from="1782721163895" duration="674000" />
       <workItem from="1782722220152" duration="4361000" />
       <workItem from="1783386471861" duration="16334000" />
-      <workItem from="1785734543285" duration="5613000" />
+      <workItem from="1785734543285" duration="5869000" />
+      <workItem from="1785976392659" duration="2250000" />
     </task>
     <task id="LOCAL-00001" summary="[ AI Agent ] System Prompt 제작">
       <option name="closed" value="true" />
@@ -213,17 +228,35 @@
       <option name="project" value="LOCAL" />
       <updated>1785742677975</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="[ AI Agent ] Cache Control 적용">
+      <option name="closed" value="true" />
+      <created>1785742887984</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1785742887984</updated>
+    </task>
+    <task id="LOCAL-00003" summary="[ AI Agent ] Cache Control 적용">
+      <option name="closed" value="true" />
+      <created>1785742929705</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1785742929705</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="[ AI Agent ] System Prompt 제작" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ AI Agent ] System Prompt 제작" />
+    <MESSAGE value="[ AI Agent ] Cache Control 적용" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ AI Agent ] Cache Control 적용" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
