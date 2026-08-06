@@ -1,13 +1,14 @@
 ﻿using System.Text;
 using Anthropic.Models.Messages;
 using UnrealAgent.Backend.Agent;
+using UnrealAgent.Backend.Tool;
 
 namespace UnrealAgent.Backend.Prompt;
 /// <summary>
 /// Claude API 시스템 프롬프트 구성과 MessageCreateParams 생성을 담당.
 /// 시스템 프롬프트는 최초 호출 시 생성되고 이후 캐싱됩니다.
 /// </summary>
-public sealed class PromptBuilder
+public sealed class PromptBuilder(ToolRegistry ToolRegistry)
 {
     /// <summary> 빌더 체인의 각 섹션. 토큰 측정 시 특정 섹션을 제외할 수 있다. </summary>
     [Flags]
@@ -32,6 +33,7 @@ public sealed class PromptBuilder
         new() { Text = BuildSystemPrompt(session) }
       },
       Messages = session.Conversation.ToAnthropicMessages(),
+      Tools = ToolRegistry.GetAllSchemas().Select(S=>(ToolUnion)S).ToList(),
       Thinking = new ThinkingConfigAdaptive(),
       OutputConfig = new OutputConfig()
       {

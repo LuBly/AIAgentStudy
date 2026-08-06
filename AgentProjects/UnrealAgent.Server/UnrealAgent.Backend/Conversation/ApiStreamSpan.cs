@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Globalization;
+using System.Text;
 using Anthropic.Models.Messages;
 using UnrealAgent.Backend.Core;
 using Block = UnrealAgent.Backend.Core.Block;
@@ -18,6 +19,9 @@ public sealed class ApiStreamSpan
         
         /// <summary> 사고 과정(Extended Thinking) 응답 블록 </summary>
         public sealed record Thinking :  ActiveBlock;
+
+        /// <summary> 도구 호출 블록 </summary>
+        public sealed record ToolUse(string Id, string Name) :  ActiveBlock;
     }
 
     public abstract record Result
@@ -27,6 +31,9 @@ public sealed class ApiStreamSpan
         
         /// <summary> 대화가 완료되었습니다. </summary>
         public sealed record EndSpan(AssistantSpan CompletedSpan) : Result;
+        
+        /// <summary> 도구 실행이 필요합니다. 실행 후 다음 API 호출을 계속합니다. </summary>
+        public sealed record ExecuteTools(AssistantSpan CompletedSpan, IReadOnlyList<Block.ToolUse> ToolCalls) : Result;
     }
     
     
@@ -34,9 +41,11 @@ public sealed class ApiStreamSpan
     /// <summary> 현재 처리 중인 블록입니다. null인 경우 블록 사이 유후 상태입니다. </summary>
     private ActiveBlock? CurrentBlock;
     /// <summary> 텍스트 델타를 누적하는 버퍼입니다. </summary>
-    private StringBuilder TextBuffer = new();
+    private readonly StringBuilder TextBuffer = new();
     /// <summary> 사고 과정 델타를 누적하는 버퍼입니다. </summary>
-    private StringBuilder ThinkingBuffer = new();
+    private readonly StringBuilder ThinkingBuffer = new();
+    /// <summary> 도구 입력 Json델타를 누적하는 버퍼 </summary>
+    private readonly StringBuilder ToolJsonBuffer = new();
     /// <summary> 사고 블록의 서명입니다. 사고 델타 이후 별도 델타로 도착합니다. </summary>
     private string? ThinkingSignature;
     
@@ -87,6 +96,8 @@ public sealed class ApiStreamSpan
             CurrentBlock = new ActiveBlock.Text();
         else if (startEvt.ContentBlock.TryPickThinking(out _))
             CurrentBlock = new ActiveBlock.Thinking();
+        else if(startEvt.ContentBlock.TryPickToolUse(out ToolUseBlock? ToolUse))
+            CurrentBlock = new ActiveBlock.ToolUse(ToolUse.ID, ToolUse.Name);
         
         return null;
     }
@@ -99,20 +110,20 @@ public sealed class ApiStreamSpan
         switch (CurrentBlock)
         {
             case ActiveBlock.Text when deltaEvt.Delta.TryPickText(out TextDelta? TextDelta):
-            {
                 TextBuffer.Append(TextDelta.Text);
                 return new ChatEvent.Text(TextDelta.Text);
-            }
+            
             case ActiveBlock.Thinking when deltaEvt.Delta.TryPickThinking(out ThinkingDelta? ThinkingDelta):
-            {
                 ThinkingBuffer.Append(ThinkingDelta.Thinking);
                 return new ChatEvent.Thinking(ThinkingDelta.Thinking);
-            }
+            
             case ActiveBlock.Thinking when deltaEvt.Delta.TryPickSignature(out SignatureDelta? SigDelta):
-            {
                 ThinkingSignature = SigDelta.Signature;
                 return null;
-            }
+            
+            case ActiveBlock.ToolUse when deltaEvt.Delta.TryPickInputJson(out InputJsonDelta? JsonDelta):
+                ToolJsonBuffer.Append(JsonDelta.PartialJson);
+                return null;
             default:
                 return null;
         }
@@ -144,6 +155,15 @@ public sealed class ApiStreamSpan
                 }
                 break;
             }
+            case ActiveBlock.ToolUse { Id : { } Id, Name: { } Name }:
+            {
+                string InputJson = ToolJsonBuffer.ToString();
+                AssistantBlocks.Add(new Block.ToolUse(Id, Name, InputJson));
+                ToolJsonBuffer.Clear();
+
+                break;
+            }
+            
         }
         
         CurrentBlock = null;
@@ -180,6 +200,18 @@ public sealed class ApiStreamSpan
             AssistantBlocks = AssistantBlocks.ToList(),
         };
 
+        // 도구 실행 요청이 있는지 체크
+        List<Block.ToolUse> ToolCalls = AssistantBlocks.OfType<Block.ToolUse>().ToList();
+        
+        // 도구 사용
+        if(ToolCalls.Count > 0 && FinalStopReason is StopReason.ToolUse)
+            return new Result.ExecuteTools(CompleteSpan, ToolCalls);
+        
+        // 서버에 문제가 있었으므로 다시 실행
+        if (FinalStopReason is StopReason.PauseTurn)
+            return new Result.Continue(CompleteSpan);
+        
+        // 정상 종료
         return new Result.EndSpan(CompleteSpan);
     }
 }
