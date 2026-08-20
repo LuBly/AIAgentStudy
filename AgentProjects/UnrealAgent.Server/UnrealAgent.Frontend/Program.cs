@@ -1,4 +1,59 @@
-﻿using Anthropic.Models.Messages;
+﻿using UnrealAgent.Backend.Agent;
+using UnrealAgent.Backend.Auth;
+using UnrealAgent.Backend.Prompt;
+using UnrealAgent.Backend.Tool;
+using UnrealAgent.Backend.Tool.Tools;
+using UnrealAgent.Frontend.Infrastructure;
+
+// ── WebApplicationBuilder (서비스 등록 + 앱 설정을 담는 빌더) 생성 ──
+WebApplicationBuilder Builder = WebApplication.CreateBuilder(args);
+
+// ── Kestrel (요청을 받아서 넘겨주는 서버 엔진) 포트 설정 ──
+Builder.WebHost.UseUrls("http://localhost:55558");
+
+// ── 정적 웹 자산 강제 로드 ──
+Builder.WebHost.UseStaticWebAssets();
+
+// ── Blazor 서비스 등록 (Razor 컴포넌트 + 서버 측 인터랙티브 모드) ──
+Builder.Services.AddRazorComponents().AddInteractiveServerComponents();
+
+// ── HTTP 클라이언트 등록 (외부 API 호출용) ──
+Builder.Services.AddHttpClient("WebFetch");
+
+// ── Auth 모듈 ──
+Builder.Services.AddSingleton<AuthConfig>();
+
+// ── Agent 모듈 (에이전트 루프 + 세션) ──
+Builder.Services.AddSingleton<AgentSession>();
+
+// ── Runtime 모듈 ──
+Builder.Services.AddSingleton<PromptBuilder>();
+
+// ── Tool 모듈 ──
+Builder.Services.AddSingleton<ToolRegistry>();
+Builder.Services.AddSingleton<ToolExecutor>();
+
+// 여기까지 서비스 등록 단계. Build() 이후는 미들웨어/라우팅 설정 단계입니다.
+WebApplication App = Builder.Build();
+
+// ── Auth 설정 로드 ──
+App.Services.GetRequiredService<AuthConfig>().Load();
+
+// ── 어트리뷰트 기반 자동 스캔 ──
+App.Services.GetRequiredService<ToolRegistry>().DiscoverTools(typeof(WebSearch).Assembly);
+
+// ── 미들웨어 파이프라인 ──
+App.UseStaticFiles();
+App.UseAntiforgery();
+
+// ── Blazor 엔드포인트 (Razor 컴포넌트 라우팅 + 서버 렌더 모드 적용) ──
+App.MapRazorComponents<App>().AddInteractiveServerRenderMode();
+
+// ── 서버 실행 (요청 수신 대기 시작) - http://localhost:55558/ ──
+App.Run();
+
+/*
+using Anthropic.Models.Messages;
 using Microsoft.Extensions.DependencyInjection;
 using UnrealAgent.Backend.Agent;
 using UnrealAgent.Backend.Auth;
@@ -120,4 +175,4 @@ while (true)
 
     Console.WriteLine();
 }
-
+*/

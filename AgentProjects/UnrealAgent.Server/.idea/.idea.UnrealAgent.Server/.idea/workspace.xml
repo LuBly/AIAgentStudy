@@ -15,9 +15,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a24f1e12-9561-45e1-95fe-6ed92ee40354" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Tool/Tools/WebFetch.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/Infrastructure/App.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/Infrastructure/Routes.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/Layout/MainLayout.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/Page/Chat.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/_Imports.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/wwwroot/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/wwwroot/js/chat.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealAgent.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealAgent.Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Backend/UnrealAgent.Backend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Backend/UnrealAgent.Backend.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/UnrealAgent.Frontend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UnrealAgent.Frontend.csproj" afterDir="false" />
     </list>
@@ -31,6 +36,13 @@
   </component>
   <component name="EmbeddingIndexingInfo">
     <option name="cachedIndexableFilesCount" value="10" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -78,61 +90,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000088283726043" />
-      <entry key="S2" value="1.1135128797026899" />
-      <entry key="S5" value="2.110123241140202" />
-      <entry key="S10" value="4.048301933440351" />
-      <entry key="S30" value="10.815325619812219" />
-      <entry key="S60" value="21.04685113437987" />
-      <entry key="M2" value="40.81641001010857" />
-      <entry key="M5" value="102.415567749199" />
-      <entry key="M10" value="206.2512540098301" />
-      <entry key="M15" value="296.4591487766835" />
-      <entry key="M30" value="501.5512974137488" />
-      <entry key="H1" value="790.5151527369462" />
-      <entry key="H2" value="1216.3292575086675" />
-      <entry key="H4" value="1812.7638492768572" />
-      <entry key="D1" value="3265.671743628373" />
-      <entry key="W1" value="3757.7125659397557" />
+      <entry key="MS100" value="1.8064247259408782E-12" />
+      <entry key="MS500" value="0.004484743961305931" />
+      <entry key="S2" value="0.43993152326273516" />
+      <entry key="S5" value="2.37890662259619" />
+      <entry key="S10" value="5.524321345449778" />
+      <entry key="S30" value="15.513724823283049" />
+      <entry key="S60" value="27.528187285259513" />
+      <entry key="M2" value="48.66351319802579" />
+      <entry key="M5" value="111.00546554832641" />
+      <entry key="M10" value="215.04984919270976" />
+      <entry key="M15" value="305.8013180088396" />
+      <entry key="M30" value="512.5915678372346" />
+      <entry key="H1" value="803.4794924469173" />
+      <entry key="H2" value="1230.9309540357772" />
+      <entry key="H4" value="1828.7487126879792" />
+      <entry key="D1" value="3284.468368232341" />
+      <entry key="W1" value="3777.5148098891696" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0623463993937494E-66" />
-      <entry key="MS500" value="6.386357557810497E-14" />
-      <entry key="S2" value="5.027143039233782E-4" />
-      <entry key="S5" value="0.04894948032639474" />
-      <entry key="S10" value="0.2868355201317215" />
-      <entry key="S30" value="2.487531511325071" />
-      <entry key="S60" value="6.657421735053535" />
-      <entry key="M2" value="13.316908651255849" />
-      <entry key="M5" value="28.33276474205685" />
-      <entry key="M10" value="51.62190805748463" />
-      <entry key="M15" value="71.87925563297077" />
-      <entry key="M30" value="117.69895741875789" />
-      <entry key="H1" value="179.0998160816123" />
-      <entry key="H2" value="263.1044535535623" />
-      <entry key="H4" value="377.85933516828396" />
-      <entry key="D1" value="663.9890249293582" />
-      <entry key="W1" value="762.9480680526484" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000323478796944" />
+      <entry key="S2" value="1.086206817390991" />
+      <entry key="S5" value="1.7710060986081302" />
+      <entry key="S10" value="3.2719812024194073" />
+      <entry key="S30" value="7.333158136846405" />
+      <entry key="S60" value="11.905851514633037" />
+      <entry key="M2" value="19.140624916092666" />
+      <entry key="M5" value="35.03689613057037" />
+      <entry key="M10" value="58.733236819270495" />
+      <entry key="M15" value="79.23527809103629" />
+      <entry key="M30" value="125.56484938366525" />
+      <entry key="H1" value="187.48923470104742" />
+      <entry key="H2" value="271.92795104724235" />
+      <entry key="H4" value="387.01781394271" />
+      <entry key="D1" value="673.7435637000534" />
+      <entry key="W1" value="772.9078041049332" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.0134150849443399" />
-      <entry key="MS500" value="0.42220353986759457" />
-      <entry key="S2" value="0.8937500356371476" />
-      <entry key="S5" value="1.9571331505975145" />
-      <entry key="S10" value="4.080634492901358" />
-      <entry key="S30" value="12.942790336387377" />
-      <entry key="S60" value="27.344405668025782" />
-      <entry key="M2" value="53.82109088006235" />
-      <entry key="M5" value="130.48064658367952" />
-      <entry key="M10" value="257.6187444042643" />
-      <entry key="M15" value="368.0995264695964" />
-      <entry key="M30" value="619.0552498235785" />
-      <entry key="H1" value="969.4680930198926" />
-      <entry key="H2" value="1479.3253982594736" />
-      <entry key="H4" value="2190.5447761536852" />
-      <entry key="D1" value="3929.637791887116" />
-      <entry key="W1" value="4520.656869629482" />
+      <entry key="MS100" value="0.0017972415051267082" />
+      <entry key="MS500" value="0.28249403427578557" />
+      <entry key="S2" value="1.0458810249393744" />
+      <entry key="S5" value="3.6325122916676342" />
+      <entry key="S10" value="8.25936464623105" />
+      <entry key="S30" value="22.361743880593185" />
+      <entry key="S60" value="38.998013701266736" />
+      <entry key="M2" value="67.43881385790218" />
+      <entry key="M5" value="145.74758808926768" />
+      <entry key="M10" value="273.5141414100007" />
+      <entry key="M15" value="384.78742342042545" />
+      <entry key="M30" value="637.9554595648916" />
+      <entry key="H1" value="990.8184412208939" />
+      <entry key="H2" value="1502.7487142922046" />
+      <entry key="H4" value="2215.6871125866037" />
+      <entry key="D1" value="3958.188767140626" />
+      <entry key="W1" value="4550.418821744767" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -229,6 +241,8 @@
       <workItem from="1785997898075" duration="10889000" />
       <workItem from="1786071807073" duration="3019000" />
       <workItem from="1786075114535" duration="5975000" />
+      <workItem from="1787191120297" duration="1333000" />
+      <workItem from="1787192671101" duration="1881000" />
     </task>
     <task id="LOCAL-00001" summary="[ AI Agent ] System Prompt 제작">
       <option name="closed" value="true" />
@@ -286,7 +300,15 @@
       <option name="project" value="LOCAL" />
       <updated>1786012782431</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="* [ AI Agent ] Web Fetch 기능 구현">
+      <option name="closed" value="true" />
+      <created>1787191411006</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1787191411006</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +335,8 @@
     <MESSAGE value="[ AI Agent ] 도구 생성" />
     <MESSAGE value="[ AI Agent ] WebSearch 도구 생성" />
     <MESSAGE value="[ AI Agent ] WebSearch 로직 적용... 복잡" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ AI Agent ] WebSearch 로직 적용... 복잡" />
+    <MESSAGE value="* [ AI Agent ] Web Fetch 기능 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="* [ AI Agent ] Web Fetch 기능 구현" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
