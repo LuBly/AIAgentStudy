@@ -3,6 +3,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 using System.Xml.Linq;
 using Anthropic;
+using UnrealAgent.Backend.Core;
 
 namespace UnrealAgent.Backend.Auth;
 
@@ -13,9 +14,7 @@ namespace UnrealAgent.Backend.Auth;
 public sealed class AuthConfig
 {
     /// <summary> 설정 파일 경로입니다. </summary>
-    private readonly string ConfigPath = Path.Combine(
-        Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
-        ".unrealagent","AuthConfig.json");
+    private readonly string ConfigPath = Path.Combine(AgentPaths.UserConfigDir,"AuthConfig.json");
 
     /// <summary> Json 직렬화 옵션입니다. </summary>
     private static readonly JsonSerializerOptions JsonOptions = new() { WriteIndented = true };

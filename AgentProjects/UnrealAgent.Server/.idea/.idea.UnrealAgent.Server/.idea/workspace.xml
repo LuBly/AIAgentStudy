@@ -15,15 +15,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a24f1e12-9561-45e1-95fe-6ed92ee40354" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/Page/Chat.razor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Layout/Header.razor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Settings/SettingsPanel.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Settings/SettingsPanel.razor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Core/AgentPath.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Model/Attributes/AgentModelAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Model/IModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Model/ModelRegistry.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Model/ModelSettings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Model/Models/Haiku45.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Model/Models/Opus46.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Model/Models/Sonnet46.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealAgent.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealAgent.Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/Page/Chat.razor" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/Page/Chat.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Layout/Header.razor" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Layout/Header.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/UnrealAgent.Frontend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UnrealAgent.Frontend.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/_Imports.razor" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/_Imports.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnrealAgent.Backend/Auth/AuthConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Auth/AuthConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnrealAgent.Backend/Prompt/PromptBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Prompt/PromptBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +67,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/425b79b42021a17a211653dfafba6f23a17ab97a2b917e82265f8517649f4640/ThinkingDelta.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/82229b6833efb47f92b7f3249eecaae20e83dea1e6c3de5a0c4e0bb5af75ae/ValueTask.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/999a3bf9bf483a0bbd5898983825ca1912177f15d348f2694c48f9677fe7/FrozenDictionaryConverterFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9f9efacb2d7225c3beafa7bbeb82ba652aacc3e0faf1a1d8a6a9e8146c6eb240/ServiceProviderServiceExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d6249f45b5d2c75ad906a17294651b5d6f9e6aeeda41ea558b0ebdf185ae/ActivatorUtilities.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Agent/AgentSession.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Auth/AuthConfig.cs" root0="FORCE_HIGHLIGHTING" />
@@ -72,8 +76,16 @@
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Conversation/Conversation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Conversation/MessageSpan.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Conversation/UserInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Core/AgentPath.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Core/Block.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Core/ChatEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Model/Attributes/AgentModelAttribute.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Model/IModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Model/ModelRegistry.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Model/ModelSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Model/Models/Haiku45.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Model/Models/Opus46.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Model/Models/Sonnet46.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Prompt/PromptBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Tool/IAgentTool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Tool/ToolRegistry.cs" root0="FORCE_HIGHLIGHTING" />
@@ -91,61 +103,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="6.468700814480255E-136" />
-      <entry key="S2" value="5.081763127763121E-34" />
-      <entry key="S5" value="2.4413055009879967E-13" />
-      <entry key="S10" value="2.180152064562549E-6" />
-      <entry key="S30" value="0.1030777689625134" />
-      <entry key="S60" value="1.633949483904025" />
-      <entry key="M2" value="6.8616120576499116" />
-      <entry key="M5" value="16.76933871128414" />
-      <entry key="M10" value="22.786272451480613" />
-      <entry key="M15" value="25.627696216192504" />
-      <entry key="M30" value="41.087593107837854" />
-      <entry key="H1" value="152.36170103564885" />
-      <entry key="H2" value="509.7981383375641" />
-      <entry key="H4" value="1174.2233389900325" />
-      <entry key="D1" value="3085.55785260145" />
-      <entry key="W1" value="3792.682405541802" />
+      <entry key="MS100" value="1.3962609252411127E-6" />
+      <entry key="MS500" value="0.06745176478152669" />
+      <entry key="S2" value="0.5096652415202632" />
+      <entry key="S5" value="0.8048569195815426" />
+      <entry key="S10" value="1.3296921846685479" />
+      <entry key="S30" value="3.5612183688498016" />
+      <entry key="S60" value="5.3801170900266655" />
+      <entry key="M2" value="7.6888927133722715" />
+      <entry key="M5" value="19.167210003982486" />
+      <entry key="M10" value="45.695081795782706" />
+      <entry key="M15" value="69.46008226346024" />
+      <entry key="M30" value="119.05787978698143" />
+      <entry key="H1" value="205.03917307158483" />
+      <entry key="H2" value="477.30950260106135" />
+      <entry key="H4" value="1092.5137063224463" />
+      <entry key="D1" value="3158.405139681985" />
+      <entry key="W1" value="3978.2387022485964" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0000000019963335" />
-      <entry key="MS500" value="1.0181989622885697" />
-      <entry key="S2" value="1.3672921583195772" />
-      <entry key="S5" value="1.6698918012139399" />
-      <entry key="S10" value="1.8184694859628645" />
-      <entry key="S30" value="1.9588413496229955" />
-      <entry key="S60" value="2.3696220343403542" />
-      <entry key="M2" value="3.6592293159635285" />
-      <entry key="M5" value="5.9432206979176625" />
-      <entry key="M10" value="7.275710152240156" />
-      <entry key="M15" value="8.003691704469237" />
-      <entry key="M30" value="12.673156527496934" />
-      <entry key="H1" value="40.78935970641555" />
-      <entry key="H2" value="120.96994440401978" />
-      <entry key="H4" value="259.3160004848939" />
-      <entry key="D1" value="646.3255493593811" />
-      <entry key="W1" value="789.8645335499153" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.000017462176346" />
+      <entry key="S2" value="1.1001376160138419" />
+      <entry key="S5" value="1.6222629867926044" />
+      <entry key="S10" value="2.372422259520027" />
+      <entry key="S30" value="4.525162607957122" />
+      <entry key="S60" value="6.260184582552014" />
+      <entry key="M2" value="7.945238767299304" />
+      <entry key="M5" value="12.468771687727228" />
+      <entry key="M10" value="20.289576789539137" />
+      <entry key="M15" value="26.003178045843622" />
+      <entry key="M30" value="36.35235971064937" />
+      <entry key="H1" value="55.40321243326046" />
+      <entry key="H2" value="116.31054238663732" />
+      <entry key="H4" value="246.17234132953303" />
+      <entry key="D1" value="667.791185295634" />
+      <entry key="W1" value="834.8015426518963" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.398151959183044E-9" />
-      <entry key="MS500" value="0.024837105026215427" />
-      <entry key="S2" value="0.6485865418299854" />
-      <entry key="S5" value="1.271548269548046" />
-      <entry key="S10" value="1.5940523139176153" />
-      <entry key="S30" value="1.9791307451168973" />
-      <entry key="S60" value="3.9496965791876013" />
-      <entry key="M2" value="10.474653434858858" />
-      <entry key="M5" value="22.680498270788654" />
-      <entry key="M10" value="30.041954342465697" />
-      <entry key="M15" value="33.616403694274844" />
-      <entry key="M30" value="53.74638368086378" />
-      <entry key="H1" value="193.12172129228412" />
-      <entry key="H2" value="630.7210102452631" />
-      <entry key="H4" value="1433.4872339202793" />
-      <entry key="D1" value="3731.8613833845616" />
-      <entry key="W1" value="4582.543093013127" />
+      <entry key="MS100" value="1.179121495269587E-4" />
+      <entry key="MS500" value="0.16381828190871228" />
+      <entry key="S2" value="0.7685211854549118" />
+      <entry key="S5" value="1.7409302277761356" />
+      <entry key="S10" value="3.187001577818245" />
+      <entry key="S30" value="7.776500167164043" />
+      <entry key="S60" value="11.43533904109576" />
+      <entry key="M2" value="15.50489935368378" />
+      <entry key="M5" value="31.547429843934072" />
+      <entry key="M10" value="65.90880690964427" />
+      <entry key="M15" value="95.39753456245883" />
+      <entry key="M30" value="155.36381486893305" />
+      <entry key="H1" value="260.40555399097593" />
+      <entry key="H2" value="593.5777224588363" />
+      <entry key="H4" value="1338.638411416989" />
+      <entry key="D1" value="3826.1739189050445" />
+      <entry key="W1" value="4813.036229539744" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -157,32 +169,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET 프로젝트.UnrealAgent.Frontend.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET 프로젝트.UnrealAgent.Frontend.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "CodeLensConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET 프로젝트.UnrealAgent.Frontend">
     <configuration name="ConsoleApp1" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -245,7 +257,7 @@
       <workItem from="1786075114535" duration="5975000" />
       <workItem from="1787191120297" duration="1333000" />
       <workItem from="1787192671101" duration="5244000" />
-      <workItem from="1787203215181" duration="1766000" />
+      <workItem from="1787203215181" duration="4937000" />
     </task>
     <task id="LOCAL-00001" summary="[ AI Agent ] System Prompt 제작">
       <option name="closed" value="true" />
@@ -327,7 +339,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787202765660</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="* [ AI Agent ] API 설정창 제작">
+      <option name="closed" value="true" />
+      <created>1787206020563</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1787206020564</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,7 +377,8 @@
     <MESSAGE value="* [ AI Agent ] Web Fetch 기능 구현" />
     <MESSAGE value="* [ AI Agent ] Web Page 생성" />
     <MESSAGE value="* [ AI Agent ] Message 기능 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="* [ AI Agent ] Message 기능 추가" />
+    <MESSAGE value="* [ AI Agent ] API 설정창 제작" />
+    <option name="LAST_COMMIT_MESSAGE" value="* [ AI Agent ] API 설정창 제작" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
