@@ -15,17 +15,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a24f1e12-9561-45e1-95fe-6ed92ee40354" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Tool/ToolExecutor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Tool/ToolRegistry.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Tool/Tools/WebFetch.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealAgent.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealAgent.Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Backend/Conversation/ApiStreamSpan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Conversation/ApiStreamSpan.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Backend/Conversation/AssistantSpan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Conversation/AssistantSpan.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Backend/Conversation/Conversation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Conversation/Conversation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Backend/Core/Block.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Core/Block.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Backend/Core/ChatEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Core/ChatEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Backend/Prompt/PromptBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Prompt/PromptBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Backend/Tool/ToolResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Tool/ToolResult.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnrealAgent.Backend/UnrealAgent.Backend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Backend/UnrealAgent.Backend.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/UnrealAgent.Frontend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UnrealAgent.Frontend.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +53,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/425b79b42021a17a211653dfafba6f23a17ab97a2b917e82265f8517649f4640/ThinkingDelta.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/82229b6833efb47f92b7f3249eecaae20e83dea1e6c3de5a0c4e0bb5af75ae/ValueTask.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/999a3bf9bf483a0bbd5898983825ca1912177f15d348f2694c48f9677fe7/FrozenDictionaryConverterFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d6249f45b5d2c75ad906a17294651b5d6f9e6aeeda41ea558b0ebdf185ae/ActivatorUtilities.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Agent/AgentSession.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Auth/AuthConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Conversation/ApiStreamSpan.cs" root0="FORCE_HIGHLIGHTING" />
@@ -72,6 +67,7 @@
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Tool/IAgentTool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Tool/ToolRegistry.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Tool/ToolResult.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Tool/Tools/WebFetch.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Tool/Tools/WebSearch.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Frontend/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -82,61 +78,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000000062037" />
-      <entry key="MS500" value="1.0057349634220083" />
-      <entry key="S2" value="1.2751900094060287" />
-      <entry key="S5" value="1.5968333259127996" />
-      <entry key="S10" value="1.772549885711466" />
-      <entry key="S30" value="1.917576278566012" />
-      <entry key="S60" value="1.9579021345049052" />
-      <entry key="M2" value="1.9805456868921962" />
-      <entry key="M5" value="3.568704531326919" />
-      <entry key="M10" value="24.261975737882416" />
-      <entry key="M15" value="63.025704086005994" />
-      <entry key="M30" value="193.5709754171961" />
-      <entry key="H1" value="409.30076959474303" />
-      <entry key="H2" value="765.9465784481739" />
-      <entry key="H4" value="1288.0712029703632" />
-      <entry key="D1" value="2543.629034116568" />
-      <entry key="W1" value="2958.94626610715" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000088283726043" />
+      <entry key="S2" value="1.1135128797026899" />
+      <entry key="S5" value="2.110123241140202" />
+      <entry key="S10" value="4.048301933440351" />
+      <entry key="S30" value="10.815325619812219" />
+      <entry key="S60" value="21.04685113437987" />
+      <entry key="M2" value="40.81641001010857" />
+      <entry key="M5" value="102.415567749199" />
+      <entry key="M10" value="206.2512540098301" />
+      <entry key="M15" value="296.4591487766835" />
+      <entry key="M30" value="501.5512974137488" />
+      <entry key="H1" value="790.5151527369462" />
+      <entry key="H2" value="1216.3292575086675" />
+      <entry key="H4" value="1812.7638492768572" />
+      <entry key="D1" value="3265.671743628373" />
+      <entry key="W1" value="3757.7125659397557" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0494551224821039E-5" />
-      <entry key="MS500" value="0.10097009720120101" />
-      <entry key="S2" value="0.5637002060727108" />
-      <entry key="S5" value="0.7950954669454448" />
-      <entry key="S10" value="0.8916812586039053" />
-      <entry key="S30" value="0.9625054845960028" />
-      <entry key="S60" value="0.9810736465278487" />
-      <entry key="M2" value="0.9908607292938891" />
-      <entry key="M5" value="1.381201981885226" />
-      <entry key="M10" value="6.6457358371600534" />
-      <entry key="M15" value="16.159254422640245" />
-      <entry key="M30" value="44.98681241170709" />
-      <entry key="H1" value="86.71318691463847" />
-      <entry key="H2" value="152.37232619393106" />
-      <entry key="H4" value="250.3642441701899" />
-      <entry key="D1" value="497.1688370450565" />
-      <entry key="W1" value="580.9673167999282" />
+      <entry key="MS100" value="1.0623463993937494E-66" />
+      <entry key="MS500" value="6.386357557810497E-14" />
+      <entry key="S2" value="5.027143039233782E-4" />
+      <entry key="S5" value="0.04894948032639474" />
+      <entry key="S10" value="0.2868355201317215" />
+      <entry key="S30" value="2.487531511325071" />
+      <entry key="S60" value="6.657421735053535" />
+      <entry key="M2" value="13.316908651255849" />
+      <entry key="M5" value="28.33276474205685" />
+      <entry key="M10" value="51.62190805748463" />
+      <entry key="M15" value="71.87925563297077" />
+      <entry key="M30" value="117.69895741875789" />
+      <entry key="H1" value="179.0998160816123" />
+      <entry key="H2" value="263.1044535535623" />
+      <entry key="H4" value="377.85933516828396" />
+      <entry key="D1" value="663.9890249293582" />
+      <entry key="W1" value="762.9480680526484" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.018710616702370682" />
-      <entry key="MS500" value="0.4829384613871652" />
-      <entry key="S2" value="1.4955845904108447" />
-      <entry key="S5" value="2.213884514326081" />
-      <entry key="S10" value="2.566300229401124" />
-      <entry key="S30" value="2.845210858601275" />
-      <entry key="S60" value="2.921244938652058" />
-      <entry key="M2" value="2.96245755101923" />
-      <entry key="M5" value="4.94329156332043" />
-      <entry key="M10" value="30.883568632574324" />
-      <entry key="M15" value="79.1430317714161" />
-      <entry key="M30" value="238.4955369016888" />
-      <entry key="H1" value="495.9496829179839" />
-      <entry key="H2" value="918.2585354350477" />
-      <entry key="H4" value="1538.3842032497105" />
-      <entry key="D1" value="3040.7807716572775" />
-      <entry key="W1" value="3539.910732895912" />
+      <entry key="MS100" value="0.0134150849443399" />
+      <entry key="MS500" value="0.42220353986759457" />
+      <entry key="S2" value="0.8937500356371476" />
+      <entry key="S5" value="1.9571331505975145" />
+      <entry key="S10" value="4.080634492901358" />
+      <entry key="S30" value="12.942790336387377" />
+      <entry key="S60" value="27.344405668025782" />
+      <entry key="M2" value="53.82109088006235" />
+      <entry key="M5" value="130.48064658367952" />
+      <entry key="M10" value="257.6187444042643" />
+      <entry key="M15" value="368.0995264695964" />
+      <entry key="M30" value="619.0552498235785" />
+      <entry key="H1" value="969.4680930198926" />
+      <entry key="H2" value="1479.3253982594736" />
+      <entry key="H4" value="2190.5447761536852" />
+      <entry key="D1" value="3929.637791887116" />
+      <entry key="W1" value="4520.656869629482" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -148,31 +144,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET 프로젝트.UnrealAgent.Frontend.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "CodeLensConfigurable",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET 프로젝트.UnrealAgent.Frontend.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET 프로젝트.UnrealAgent.Frontend">
     <configuration name="ConsoleApp1" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -230,7 +226,9 @@
       <workItem from="1783386471861" duration="16334000" />
       <workItem from="1785734543285" duration="5869000" />
       <workItem from="1785976392659" duration="6341000" />
-      <workItem from="1785997898075" duration="10320000" />
+      <workItem from="1785997898075" duration="10889000" />
+      <workItem from="1786071807073" duration="3019000" />
+      <workItem from="1786075114535" duration="5975000" />
     </task>
     <task id="LOCAL-00001" summary="[ AI Agent ] System Prompt 제작">
       <option name="closed" value="true" />
@@ -280,7 +278,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785981402413</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="[ AI Agent ] WebSearch 로직 적용... 복잡">
+      <option name="closed" value="true" />
+      <created>1786012782430</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1786012782431</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,6 +294,17 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="[ AI Agent ] System Prompt 제작" />
@@ -295,7 +312,8 @@
     <MESSAGE value="[ AI Agent ] Tool base 제작" />
     <MESSAGE value="[ AI Agent ] 도구 생성" />
     <MESSAGE value="[ AI Agent ] WebSearch 도구 생성" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ AI Agent ] WebSearch 도구 생성" />
+    <MESSAGE value="[ AI Agent ] WebSearch 로직 적용... 복잡" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ AI Agent ] WebSearch 로직 적용... 복잡" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -312,19 +330,6 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/UnrealAgent.Frontend/Program.cs</url>
-          <line>95</line>
-          <properties documentPath="E:\Study\AIAgentStudy\AgentProjects\UnrealAgent.Server\UnrealAgent.Frontend\Program.cs" containingFunctionPresentation="">
-            <startOffsets>
-              <option value="3009" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3054" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

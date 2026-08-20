@@ -10,6 +10,8 @@ using UnrealAgent.Backend.Tool.Tools;
 using Block = UnrealAgent.Backend.Core.Block;
 
 ServiceCollection Services = new ServiceCollection();
+Services.AddHttpClient("WebFetch");
+
 // ── Auth 모듈 ──
 Services.AddSingleton<AuthConfig>();
 
