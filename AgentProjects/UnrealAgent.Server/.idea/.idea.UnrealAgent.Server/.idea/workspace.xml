@@ -15,14 +15,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a24f1e12-9561-45e1-95fe-6ed92ee40354" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Input/ChatInput.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Layout/AgentTabBar.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Layout/Header.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/ChatMessages.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/EmptyState.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Settings/SettingPanel.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/Page/Chat.razor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Layout/Header.razor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Settings/SettingsPanel.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Settings/SettingsPanel.razor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealAgent.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealAgent.Server/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/Page/Chat.razor" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/Page/Chat.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Layout/Header.razor" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Layout/Header.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/UnrealAgent.Frontend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UnrealAgent.Frontend.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/_Imports.razor" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/_Imports.razor" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +80,9 @@
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Tool/ToolResult.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Tool/Tools/WebFetch.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Tool/Tools/WebSearch.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnrealAgent.Frontend/Page/Chat.razor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Frontend/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnrealAgent.Frontend/UI/Layout/Header.razor.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -89,61 +91,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0011334483908492" />
-      <entry key="S2" value="1.484854924924555" />
-      <entry key="S5" value="2.7089561332121663" />
-      <entry key="S10" value="3.6117521210152357" />
-      <entry key="S30" value="4.469344833706808" />
-      <entry key="S60" value="4.726080691095863" />
-      <entry key="M2" value="4.943275882078694" />
-      <entry key="M5" value="6.821940814043162" />
-      <entry key="M10" value="11.862410757759953" />
-      <entry key="M15" value="20.76191126010811" />
-      <entry key="M30" value="92.79862211192271" />
-      <entry key="H1" value="326.7058306905481" />
-      <entry key="H2" value="781.8520328818392" />
-      <entry key="H4" value="1460.1893586964723" />
-      <entry key="D1" value="3181.600134268809" />
-      <entry key="W1" value="3783.6420938957194" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="6.468700814480255E-136" />
+      <entry key="S2" value="5.081763127763121E-34" />
+      <entry key="S5" value="2.4413055009879967E-13" />
+      <entry key="S10" value="2.180152064562549E-6" />
+      <entry key="S30" value="0.1030777689625134" />
+      <entry key="S60" value="1.633949483904025" />
+      <entry key="M2" value="6.8616120576499116" />
+      <entry key="M5" value="16.76933871128414" />
+      <entry key="M10" value="22.786272451480613" />
+      <entry key="M15" value="25.627696216192504" />
+      <entry key="M30" value="41.087593107837854" />
+      <entry key="H1" value="152.36170103564885" />
+      <entry key="H2" value="509.7981383375641" />
+      <entry key="H4" value="1174.2233389900325" />
+      <entry key="D1" value="3085.55785260145" />
+      <entry key="W1" value="3792.682405541802" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="6.248442668239417E-7" />
-      <entry key="MS500" value="0.05746755082417731" />
-      <entry key="S2" value="0.5667273668359959" />
-      <entry key="S5" value="1.1104129201011574" />
-      <entry key="S10" value="1.4659904559474903" />
-      <entry key="S30" value="1.7965137803896063" />
-      <entry key="S60" value="1.895718756961287" />
-      <entry key="M2" value="2.052893447052113" />
-      <entry key="M5" value="3.906508767856477" />
-      <entry key="M10" value="7.4550913288436025" />
-      <entry key="M15" value="11.067683976708151" />
-      <entry key="M30" value="30.451871970742136" />
-      <entry key="H1" value="85.35459015874062" />
-      <entry key="H2" value="182.80777008028542" />
-      <entry key="H4" value="319.7121370280209" />
-      <entry key="D1" value="663.8325367410667" />
-      <entry key="W1" value="785.4230128324091" />
+      <entry key="MS100" value="1.0000000019963335" />
+      <entry key="MS500" value="1.0181989622885697" />
+      <entry key="S2" value="1.3672921583195772" />
+      <entry key="S5" value="1.6698918012139399" />
+      <entry key="S10" value="1.8184694859628645" />
+      <entry key="S30" value="1.9588413496229955" />
+      <entry key="S60" value="2.3696220343403542" />
+      <entry key="M2" value="3.6592293159635285" />
+      <entry key="M5" value="5.9432206979176625" />
+      <entry key="M10" value="7.275710152240156" />
+      <entry key="M15" value="8.003691704469237" />
+      <entry key="M30" value="12.673156527496934" />
+      <entry key="H1" value="40.78935970641555" />
+      <entry key="H2" value="120.96994440401978" />
+      <entry key="H4" value="259.3160004848939" />
+      <entry key="D1" value="646.3255493593811" />
+      <entry key="W1" value="789.8645335499153" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9330329924426628" />
-      <entry key="MS500" value="1.002573968721931" />
-      <entry key="S2" value="1.837772544359012" />
-      <entry key="S5" value="3.5997434956045953" />
-      <entry key="S10" value="4.918916911502475" />
-      <entry key="S30" value="6.1971281516803405" />
-      <entry key="S60" value="6.584952850052464" />
-      <entry key="M2" value="6.973599719290927" />
-      <entry key="M5" value="10.699865285573724" />
-      <entry key="M10" value="19.286284031945186" />
-      <entry key="M15" value="31.797600137858517" />
-      <entry key="M30" value="123.2037601016636" />
-      <entry key="H1" value="411.99315633959213" />
-      <entry key="H2" value="964.5864139866283" />
-      <entry key="H4" value="1779.8362920443155" />
-      <entry key="D1" value="3845.4099188363994" />
-      <entry key="W1" value="4569.061263305961" />
+      <entry key="MS100" value="2.398151959183044E-9" />
+      <entry key="MS500" value="0.024837105026215427" />
+      <entry key="S2" value="0.6485865418299854" />
+      <entry key="S5" value="1.271548269548046" />
+      <entry key="S10" value="1.5940523139176153" />
+      <entry key="S30" value="1.9791307451168973" />
+      <entry key="S60" value="3.9496965791876013" />
+      <entry key="M2" value="10.474653434858858" />
+      <entry key="M5" value="22.680498270788654" />
+      <entry key="M10" value="30.041954342465697" />
+      <entry key="M15" value="33.616403694274844" />
+      <entry key="M30" value="53.74638368086378" />
+      <entry key="H1" value="193.12172129228412" />
+      <entry key="H2" value="630.7210102452631" />
+      <entry key="H4" value="1433.4872339202793" />
+      <entry key="D1" value="3731.8613833845616" />
+      <entry key="W1" value="4582.543093013127" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -155,32 +157,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET 프로젝트.UnrealAgent.Frontend.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "CodeLensConfigurable",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET 프로젝트.UnrealAgent.Frontend.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET 프로젝트.UnrealAgent.Frontend">
     <configuration name="ConsoleApp1" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -242,7 +244,8 @@
       <workItem from="1786071807073" duration="3019000" />
       <workItem from="1786075114535" duration="5975000" />
       <workItem from="1787191120297" duration="1333000" />
-      <workItem from="1787192671101" duration="4775000" />
+      <workItem from="1787192671101" duration="5244000" />
+      <workItem from="1787203215181" duration="1766000" />
     </task>
     <task id="LOCAL-00001" summary="[ AI Agent ] System Prompt 제작">
       <option name="closed" value="true" />
@@ -316,7 +319,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787196688414</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="* [ AI Agent ] Message 기능 추가">
+      <option name="closed" value="true" />
+      <created>1787202765660</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1787202765660</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +356,8 @@
     <MESSAGE value="[ AI Agent ] WebSearch 로직 적용... 복잡" />
     <MESSAGE value="* [ AI Agent ] Web Fetch 기능 구현" />
     <MESSAGE value="* [ AI Agent ] Web Page 생성" />
-    <option name="LAST_COMMIT_MESSAGE" value="* [ AI Agent ] Web Page 생성" />
+    <MESSAGE value="* [ AI Agent ] Message 기능 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="* [ AI Agent ] Message 기능 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
