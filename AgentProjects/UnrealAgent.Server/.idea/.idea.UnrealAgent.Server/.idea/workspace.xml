@@ -15,10 +15,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a24f1e12-9561-45e1-95fe-6ed92ee40354" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Input/EffortSelector.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Input/EffortSelector.razor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Agent/AgentLoop.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealAgent.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealAgent.Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Input/ChatInput.razor" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Input/ChatInput.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnrealAgent.Backend/Conversation/Conversation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Conversation/Conversation.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +60,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/999a3bf9bf483a0bbd5898983825ca1912177f15d348f2694c48f9677fe7/FrozenDictionaryConverterFactory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9f9efacb2d7225c3beafa7bbeb82ba652aacc3e0faf1a1d8a6a9e8146c6eb240/ServiceProviderServiceExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d6249f45b5d2c75ad906a17294651b5d6f9e6aeeda41ea558b0ebdf185ae/ActivatorUtilities.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Agent/AgentLoop.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Agent/AgentSession.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Auth/AuthConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Backend/Conversation/ApiStreamSpan.cs" root0="FORCE_HIGHLIGHTING" />
@@ -96,61 +96,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.015625" />
-      <entry key="MS500" value="1.435275313229878" />
-      <entry key="S2" value="1.8362707143491135" />
-      <entry key="S5" value="2.7029637179585446" />
-      <entry key="S10" value="4.8103135564282535" />
-      <entry key="S30" value="8.962510299082048" />
-      <entry key="S60" value="10.907338944899402" />
-      <entry key="M2" value="13.50711336219144" />
-      <entry key="M5" value="28.45348099341214" />
-      <entry key="M10" value="57.0059924011237" />
-      <entry key="M15" value="83.17913328519384" />
-      <entry key="M30" value="145.22167965632767" />
-      <entry key="H1" value="243.0146365120146" />
-      <entry key="H2" value="507.87524451697425" />
-      <entry key="H4" value="1113.5858118074523" />
-      <entry key="D1" value="3223.3228861150587" />
-      <entry key="W1" value="4076.8282296146326" />
+      <entry key="MS100" value="8.398492934570221E-26" />
+      <entry key="MS500" value="9.670425630407095E-6" />
+      <entry key="S2" value="0.06869048269873668" />
+      <entry key="S5" value="0.7022193440904992" />
+      <entry key="S10" value="2.2672345462258154" />
+      <entry key="S30" value="8.658842101407721" />
+      <entry key="S60" value="19.494740408509767" />
+      <entry key="M2" value="41.927851213723116" />
+      <entry key="M5" value="96.35094363728774" />
+      <entry key="M10" value="156.8627920145575" />
+      <entry key="M15" value="200.20824865776993" />
+      <entry key="M30" value="288.951298143258" />
+      <entry key="H1" value="407.3109891329765" />
+      <entry key="H2" value="677.491394547385" />
+      <entry key="H4" value="1282.5408723376256" />
+      <entry key="D1" value="3421.8440574549886" />
+      <entry key="W1" value="4296.241081826165" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="3.3399397348100953E-118" />
-      <entry key="S5" value="1.9277319220736381E-47" />
-      <entry key="S10" value="7.573513050283752E-24" />
-      <entry key="S30" value="4.228005805479769E-8" />
-      <entry key="S60" value="4.25392977264997E-4" />
-      <entry key="M2" value="0.050433775549281704" />
-      <entry key="M5" value="1.2469315699937553" />
-      <entry key="M10" value="5.72516230405751" />
-      <entry key="M15" value="11.112798542643457" />
-      <entry key="M30" value="24.57239525999152" />
-      <entry key="H1" value="46.568127261663655" />
-      <entry key="H2" value="106.06610095671" />
-      <entry key="H4" value="234.55020631687233" />
-      <entry key="D1" value="666.1837753625084" />
-      <entry key="W1" value="840.2576558044673" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.000000000669613" />
+      <entry key="S2" value="1.008228643890906" />
+      <entry key="S5" value="1.2681696811127448" />
+      <entry key="S10" value="1.9137780275600247" />
+      <entry key="S30" value="4.228190994051385" />
+      <entry key="S60" value="7.899907721593064" />
+      <entry key="M2" value="14.643376365526409" />
+      <entry key="M5" value="27.56607621364842" />
+      <entry key="M10" value="38.54133786965139" />
+      <entry key="M15" value="46.19283496513804" />
+      <entry key="M30" value="62.921669687818344" />
+      <entry key="H1" value="87.54995241499229" />
+      <entry key="H2" value="147.10265051923605" />
+      <entry key="H4" value="275.1676553429885" />
+      <entry key="D1" value="712.9506540577526" />
+      <entry key="W1" value="891.3168469995127" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.001536146643155" />
-      <entry key="MS500" value="1.4307000625317225" />
-      <entry key="S2" value="1.8340581744862818" />
-      <entry key="S5" value="2.692899465976032" />
-      <entry key="S10" value="4.79383086416703" />
-      <entry key="S30" value="8.95002443727952" />
-      <entry key="S60" value="10.899911017756795" />
-      <entry key="M2" value="13.551243824407978" />
-      <entry key="M5" value="29.684102664126716" />
-      <entry key="M10" value="62.702052097134484" />
-      <entry key="M15" value="94.25712227611932" />
-      <entry key="M30" value="169.7582315188879" />
-      <entry key="H1" value="289.5493620945495" />
-      <entry key="H2" value="613.9016341352473" />
-      <entry key="H4" value="1348.0901287338363" />
-      <entry key="D1" value="3889.4842320510606" />
-      <entry key="W1" value="4917.081832832535" />
+      <entry key="MS100" value="0.005190178961314496" />
+      <entry key="MS500" value="0.3491707819046014" />
+      <entry key="S2" value="0.8166544216778242" />
+      <entry key="S5" value="1.719619623726456" />
+      <entry key="S10" value="3.8878037620491175" />
+      <entry key="S30" value="12.559840852707291" />
+      <entry key="S60" value="27.052161931954267" />
+      <entry key="M2" value="56.24168236854014" />
+      <entry key="M5" value="123.66223064649802" />
+      <entry key="M10" value="195.22257809868302" />
+      <entry key="M15" value="246.25559391327855" />
+      <entry key="M30" value="351.7751460923309" />
+      <entry key="H1" value="494.79415075057034" />
+      <entry key="H2" value="824.5376500454863" />
+      <entry key="H4" value="1557.6544396806664" />
+      <entry key="D1" value="4134.770717985377" />
+      <entry key="W1" value="5187.553632117503" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -251,7 +251,7 @@
       <workItem from="1787191120297" duration="1333000" />
       <workItem from="1787192671101" duration="5244000" />
       <workItem from="1787203215181" duration="6535000" />
-      <workItem from="1787285276402" duration="1239000" />
+      <workItem from="1787285276402" duration="2211000" />
     </task>
     <task id="LOCAL-00001" summary="[ AI Agent ] System Prompt 제작">
       <option name="closed" value="true" />
@@ -365,7 +365,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787210809323</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="* [ AI Agent ] EffortSelect UI 추가">
+      <option name="closed" value="true" />
+      <created>1787288606612</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1787288606612</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,7 +407,8 @@
     <MESSAGE value="* [ AI Agent ] Model 선택 Backend 구현" />
     <MESSAGE value="* [ AI Agent ] Model 설정 프론트 제작" />
     <MESSAGE value="* [ AI Agent ] Thinking Toggle FrontEnd 적용" />
-    <option name="LAST_COMMIT_MESSAGE" value="* [ AI Agent ] Thinking Toggle FrontEnd 적용" />
+    <MESSAGE value="* [ AI Agent ] EffortSelect UI 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="* [ AI Agent ] EffortSelect UI 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

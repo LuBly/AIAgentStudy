@@ -14,7 +14,7 @@ public class Conversation
      private readonly List<MessageSpan> MessageSpans = [];
 
      /// <summary> MessageSpan을 추가하고 반환 </summary>
-     public MessageSpan AddMessageSpan(string Input)
+     public MessageSpan AddMessageSpan(UserInput Input)
      {
           MessageSpan messageSpan = new() {UserInput =  Input};
           MessageSpans.Add(messageSpan);
