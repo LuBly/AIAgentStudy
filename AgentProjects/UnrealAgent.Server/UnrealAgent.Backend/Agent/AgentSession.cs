@@ -1,5 +1,5 @@
-﻿using UnrealAgent.Backend.Conversation;
-using UnrealAgent.Backend.Core;
+﻿using UnrealAgent.Backend.Chat;
+using UnrealAgent.Backend.Conversation;
 
 namespace UnrealAgent.Backend.Agent;
 

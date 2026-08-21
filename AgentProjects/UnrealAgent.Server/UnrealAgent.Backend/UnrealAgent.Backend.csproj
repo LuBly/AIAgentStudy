@@ -9,6 +9,7 @@
     <ItemGroup>
       <PackageReference Include="Anthropic" Version="12.8.0" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="11.0.0-preview.1.26104.118" />
+      <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.11" />
       <PackageReference Include="Microsoft.Extensions.Http" Version="10.0.11" />
       <PackageReference Include="ReverseMarkdown" Version="6.1.1" />
     </ItemGroup>
