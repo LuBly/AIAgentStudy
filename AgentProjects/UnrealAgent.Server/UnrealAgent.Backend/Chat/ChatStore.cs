@@ -15,8 +15,7 @@ public sealed class ChatStore
     /// <summary> ChatEvent를 처리하여 UI 메세지를 업데이트 </summary>
     public void Process(ChatEvent Evt)
     {
-        if(Evt is ChatEvent.Assistant or ChatEvent.Thinking)
-            bIsReceiving = true;
+        bIsReceiving = Evt is ChatEvent.User;
 
         switch (Evt)
         {
@@ -59,7 +58,6 @@ public sealed class ChatStore
             case ChatEvent.Done:
             {
                 ThinkingComplete();
-                bIsReceiving = false;
                 
                 break;
             }

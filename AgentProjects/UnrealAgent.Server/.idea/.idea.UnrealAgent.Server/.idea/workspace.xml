@@ -15,15 +15,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a24f1e12-9561-45e1-95fe-6ed92ee40354" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/ChatMessages.razor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/MessageBubble.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/MessageBubble.razor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/UserMessage.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/UserMessage.razor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/AssistantMessage.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/AssistantMessage.razor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealAgent.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealAgent.Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnrealAgent.Backend/Chat/ChatStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Chat/ChatStore.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/Page/Chat.razor" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/Page/Chat.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/Page/Chat.razor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/Page/Chat.razor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/ChatMessages.razor" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/ChatMessages.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/ChatMessages.razor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/ChatMessages.razor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/MessageBubble.razor" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/MessageBubble.razor" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,61 +105,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="4.3305203888811186E-215" />
-      <entry key="MS500" value="1.3410399790354904E-43" />
-      <entry key="S2" value="2.4466371879315282E-11" />
-      <entry key="S5" value="1.1107502556830012E-4" />
-      <entry key="S10" value="0.020540973592163222" />
-      <entry key="S30" value="0.7103923997405789" />
-      <entry key="S60" value="1.8112077295437206" />
-      <entry key="M2" value="2.9674576590553285" />
-      <entry key="M5" value="4.35270810803721" />
-      <entry key="M10" value="13.04553440734208" />
-      <entry key="M15" value="31.21505135432919" />
-      <entry key="M30" value="91.75176250014242" />
-      <entry key="H1" value="202.90446788712444" />
-      <entry key="H2" value="448.3847305073165" />
-      <entry key="H4" value="1011.9133272588608" />
-      <entry key="D1" value="3487.2063739603122" />
-      <entry key="W1" value="4648.176398306002" />
+      <entry key="MS100" value="1.0000000000092737" />
+      <entry key="MS500" value="1.0068180370363145" />
+      <entry key="S2" value="1.5121243199345549" />
+      <entry key="S5" value="2.589582445575905" />
+      <entry key="S10" value="3.4682151255545524" />
+      <entry key="S30" value="4.428914093577521" />
+      <entry key="S60" value="5.3321588228079495" />
+      <entry key="M2" value="8.170043909488367" />
+      <entry key="M5" value="15.850358357541179" />
+      <entry key="M10" value="25.42920135122418" />
+      <entry key="M15" value="39.141178577459215" />
+      <entry key="M30" value="91.83657163503716" />
+      <entry key="H1" value="199.53066273824126" />
+      <entry key="H2" value="441.2387663182521" />
+      <entry key="H4" value="999.8518044505543" />
+      <entry key="D1" value="3492.4002483735762" />
+      <entry key="W1" value="4672.633546055851" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.000001435515163" />
-      <entry key="MS500" value="1.0678269811828383" />
-      <entry key="S2" value="1.5381872582090679" />
-      <entry key="S5" value="2.119034377278318" />
-      <entry key="S10" value="2.7138584328262656" />
-      <entry key="S30" value="3.4526429300328356" />
-      <entry key="S60" value="3.707692232169252" />
-      <entry key="M2" value="3.84884430472486" />
-      <entry key="M5" value="3.9633834238639976" />
-      <entry key="M10" value="4.717153005789696" />
-      <entry key="M15" value="6.344518605890743" />
-      <entry key="M30" value="12.397620268297146" />
-      <entry key="H1" value="29.428688032664127" />
-      <entry key="H2" value="79.36085357824511" />
-      <entry key="H4" value="199.22970962478968" />
-      <entry key="D1" value="712.1292854246171" />
-      <entry key="W1" value="950.7295732900865" />
+      <entry key="MS100" value="1.6725935261549707E-125" />
+      <entry key="MS500" value="1.421220259204104E-25" />
+      <entry key="S2" value="1.3387762712852748E-6" />
+      <entry key="S5" value="0.009847905956826653" />
+      <entry key="S10" value="0.19681423996428263" />
+      <entry key="S30" value="1.474515814288926" />
+      <entry key="S60" value="2.6144382113222293" />
+      <entry key="M2" value="4.0856666577402665" />
+      <entry key="M5" value="7.101820566583863" />
+      <entry key="M10" value="10.04037584994666" />
+      <entry key="M15" value="12.339784299716205" />
+      <entry key="M30" value="18.878255641419617" />
+      <entry key="H1" value="35.43165780828545" />
+      <entry key="H2" value="83.83713095817421" />
+      <entry key="H4" value="202.09034305333304" />
+      <entry key="D1" value="718.2590832938365" />
+      <entry key="W1" value="960.7991443694269" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.006707542472169949" />
-      <entry key="MS500" value="0.36754701212655755" />
-      <entry key="S2" value="0.8139886002080214" />
-      <entry key="S5" value="1.3973191673332195" />
-      <entry key="S10" value="2.1802451981884303" />
-      <entry key="S30" value="3.874265294840656" />
-      <entry key="S60" value="5.213172141190319" />
-      <entry key="M2" value="6.34071058803926" />
-      <entry key="M5" value="7.596583781957019" />
-      <entry key="M10" value="16.97576191629161" />
-      <entry key="M15" value="36.8167363807238" />
-      <entry key="M30" value="103.58880345754066" />
-      <entry key="H1" value="231.9721541054914" />
-      <entry key="H2" value="527.5253777013116" />
-      <entry key="H4" value="1211.003703495392" />
-      <entry key="D1" value="4199.2942901358765" />
-      <entry key="W1" value="5598.898885001031" />
+      <entry key="MS100" value="0.005961950035002352" />
+      <entry key="MS500" value="0.3599509320022365" />
+      <entry key="S2" value="1.110978156351356" />
+      <entry key="S5" value="2.2502671507665326" />
+      <entry key="S10" value="3.3853851188761306" />
+      <entry key="S30" value="5.726331073883106" />
+      <entry key="S60" value="7.823438033003931" />
+      <entry key="M2" value="12.164675310482133" />
+      <entry key="M5" value="22.79785817578251" />
+      <entry key="M10" value="35.142082751572495" />
+      <entry key="M15" value="51.07137821088868" />
+      <entry key="M30" value="110.29787436791467" />
+      <entry key="H1" value="234.6490674562541" />
+      <entry key="H2" value="524.8695256359058" />
+      <entry key="H4" value="1201.8066418524993" />
+      <entry key="D1" value="4210.61794677097" />
+      <entry key="W1" value="5633.425568213163" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -262,7 +261,7 @@
       <workItem from="1787192671101" duration="5244000" />
       <workItem from="1787203215181" duration="6535000" />
       <workItem from="1787285276402" duration="8478000" />
-      <workItem from="1787390015070" duration="978000" />
+      <workItem from="1787390015070" duration="1756000" />
     </task>
     <task id="LOCAL-00001" summary="[ AI Agent ] System Prompt 제작">
       <option name="closed" value="true" />
@@ -400,7 +399,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787300171508</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="* [ AI Agent ] UserMessage frontend">
+      <option name="closed" value="true" />
+      <created>1787392885307</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1787392885307</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,7 +444,8 @@
     <MESSAGE value="* [ AI Agent ] EffortSelect UI 추가" />
     <MESSAGE value="* [ AI Agent ] AgentLoop Backend로 이관" />
     <MESSAGE value="* [ AI Agent ] AI Loop Backend로 이전" />
-    <option name="LAST_COMMIT_MESSAGE" value="* [ AI Agent ] AI Loop Backend로 이전" />
+    <MESSAGE value="* [ AI Agent ] UserMessage frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="* [ AI Agent ] UserMessage frontend" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
