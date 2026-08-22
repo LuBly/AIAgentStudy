@@ -24,8 +24,11 @@ public sealed class AgentRunner(AgentSession Session) : BackgroundService
     public event Func<ChatEvent, Task>? OnChatEvent;
     
     /// <summary> 메세지를 Queue에 추가하고 BackgroundService루프를 깨운다. </summary>
-    public void EnqueueMessage(UserInput input)
+    public async Task EnqueueMessage(UserInput input)
     {
+        // 사용자 메세지 UI를 위한 await
+        await DispatchEventAsync(new ChatEvent.User(input.Text));
+        
         MessageQueue.Enqueue(input);
         Signal.Release();
     }

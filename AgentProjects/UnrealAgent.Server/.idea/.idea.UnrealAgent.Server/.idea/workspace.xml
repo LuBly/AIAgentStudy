@@ -15,20 +15,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a24f1e12-9561-45e1-95fe-6ed92ee40354" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Agent/AgentRunner.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Chat/ChatStore.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Chat/ChatUIMessage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/ChatMessages.razor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/MessageBubble.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/MessageBubble.razor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/UserMessage.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/UserMessage.razor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealAgent.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealAgent.Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Backend/Agent/AgentLoop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Agent/AgentLoop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Backend/Agent/AgentSession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Agent/AgentSession.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Backend/Conversation/ApiStreamSpan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Conversation/ApiStreamSpan.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Backend/Core/ChatEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Chat/ChatEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Backend/Tool/ToolExecutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Tool/ToolExecutor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Backend/UnrealAgent.Backend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Backend/UnrealAgent.Backend.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/Page/Chat.razor" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/Page/Chat.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/Page/Chat.razor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/Page/Chat.razor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Input/ChatInput.razor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Input/ChatInput.razor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/ChatMessages.razor" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/ChatMessages.razor" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +95,9 @@
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Frontend/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Frontend/UI/Input/ModelSelector.razor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnrealAgent.Frontend/UI/Layout/Header.razor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/ChatMessages.razor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/MessageBubble.razor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/UserMessage.razor.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -108,61 +106,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000000000004" />
-      <entry key="MS500" value="1.001491635256664" />
-      <entry key="S2" value="1.3300790072133675" />
-      <entry key="S5" value="1.9727907412952788" />
-      <entry key="S10" value="2.3954982993605296" />
-      <entry key="S30" value="3.259193364007904" />
-      <entry key="S60" value="5.881986918906532" />
-      <entry key="M2" value="15.575738056855176" />
-      <entry key="M5" value="62.379918678708506" />
-      <entry key="M10" value="120.68189667769816" />
-      <entry key="M15" value="153.714015761619" />
-      <entry key="M30" value="206.16310864120393" />
-      <entry key="H1" value="302.5022819275753" />
-      <entry key="H2" value="547.2022668929249" />
-      <entry key="H4" value="1118.7344328191857" />
-      <entry key="D1" value="3539.590845175034" />
-      <entry key="W1" value="4646.719425612478" />
+      <entry key="MS100" value="4.3305203888811186E-215" />
+      <entry key="MS500" value="1.3410399790354904E-43" />
+      <entry key="S2" value="2.4466371879315282E-11" />
+      <entry key="S5" value="1.1107502556830012E-4" />
+      <entry key="S10" value="0.020540973592163222" />
+      <entry key="S30" value="0.7103923997405789" />
+      <entry key="S60" value="1.8112077295437206" />
+      <entry key="M2" value="2.9674576590553285" />
+      <entry key="M5" value="4.35270810803721" />
+      <entry key="M10" value="13.04553440734208" />
+      <entry key="M15" value="31.21505135432919" />
+      <entry key="M30" value="91.75176250014242" />
+      <entry key="H1" value="202.90446788712444" />
+      <entry key="H2" value="448.3847305073165" />
+      <entry key="H4" value="1011.9133272588608" />
+      <entry key="D1" value="3487.2063739603122" />
+      <entry key="W1" value="4648.176398306002" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="4.694206779390475E-99" />
-      <entry key="S2" value="2.6175232868584193E-25" />
-      <entry key="S5" value="1.4694547664528302E-10" />
-      <entry key="S10" value="1.21225620224156E-5" />
-      <entry key="S30" value="0.02439502434116079" />
-      <entry key="S60" value="0.22394227067958644" />
-      <entry key="M2" value="1.1740519203334159" />
-      <entry key="M5" value="5.773853813027533" />
-      <entry key="M10" value="11.349437344275142" />
-      <entry key="M15" value="14.493677885457776" />
-      <entry key="M30" value="20.81335793110032" />
-      <entry key="H1" value="40.01630643567934" />
-      <entry key="H2" value="94.53070132180363" />
-      <entry key="H4" value="218.65269548716503" />
-      <entry key="D1" value="721.6285274991052" />
-      <entry key="W1" value="949.2869921208585" />
+      <entry key="MS100" value="1.000001435515163" />
+      <entry key="MS500" value="1.0678269811828383" />
+      <entry key="S2" value="1.5381872582090679" />
+      <entry key="S5" value="2.119034377278318" />
+      <entry key="S10" value="2.7138584328262656" />
+      <entry key="S30" value="3.4526429300328356" />
+      <entry key="S60" value="3.707692232169252" />
+      <entry key="M2" value="3.84884430472486" />
+      <entry key="M5" value="3.9633834238639976" />
+      <entry key="M10" value="4.717153005789696" />
+      <entry key="M15" value="6.344518605890743" />
+      <entry key="M30" value="12.397620268297146" />
+      <entry key="H1" value="29.428688032664127" />
+      <entry key="H2" value="79.36085357824511" />
+      <entry key="H4" value="199.22970962478968" />
+      <entry key="D1" value="712.1292854246171" />
+      <entry key="W1" value="950.7295732900865" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="4.712580117582938E-13" />
-      <entry key="MS500" value="0.004874980920432801" />
-      <entry key="S2" value="0.5695728089366592" />
-      <entry key="S5" value="1.5367498871419663" />
-      <entry key="S10" value="2.146305922603757" />
-      <entry key="S30" value="3.1853558250038922" />
-      <entry key="S60" value="6.034233907220252" />
-      <entry key="M2" value="16.6772865106209" />
-      <entry key="M5" value="68.06126415449341" />
-      <entry key="M10" value="131.94586183159583" />
-      <entry key="M15" value="168.13583863197866" />
-      <entry key="M30" value="226.9276425979666" />
-      <entry key="H1" value="342.47941565227075" />
-      <entry key="H2" value="641.6930723410451" />
-      <entry key="H4" value="1337.3429423371922" />
-      <entry key="D1" value="4261.19504002079" />
-      <entry key="W1" value="5596.001839094253" />
+      <entry key="MS100" value="0.006707542472169949" />
+      <entry key="MS500" value="0.36754701212655755" />
+      <entry key="S2" value="0.8139886002080214" />
+      <entry key="S5" value="1.3973191673332195" />
+      <entry key="S10" value="2.1802451981884303" />
+      <entry key="S30" value="3.874265294840656" />
+      <entry key="S60" value="5.213172141190319" />
+      <entry key="M2" value="6.34071058803926" />
+      <entry key="M5" value="7.596583781957019" />
+      <entry key="M10" value="16.97576191629161" />
+      <entry key="M15" value="36.8167363807238" />
+      <entry key="M30" value="103.58880345754066" />
+      <entry key="H1" value="231.9721541054914" />
+      <entry key="H2" value="527.5253777013116" />
+      <entry key="H4" value="1211.003703495392" />
+      <entry key="D1" value="4199.2942901358765" />
+      <entry key="W1" value="5598.898885001031" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -263,7 +261,8 @@
       <workItem from="1787191120297" duration="1333000" />
       <workItem from="1787192671101" duration="5244000" />
       <workItem from="1787203215181" duration="6535000" />
-      <workItem from="1787285276402" duration="7760000" />
+      <workItem from="1787285276402" duration="8478000" />
+      <workItem from="1787390015070" duration="978000" />
     </task>
     <task id="LOCAL-00001" summary="[ AI Agent ] System Prompt 제작">
       <option name="closed" value="true" />
@@ -393,7 +392,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787289778748</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="* [ AI Agent ] AI Loop Backend로 이전">
+      <option name="closed" value="true" />
+      <created>1787300171508</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1787300171508</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,7 +436,8 @@
     <MESSAGE value="* [ AI Agent ] Thinking Toggle FrontEnd 적용" />
     <MESSAGE value="* [ AI Agent ] EffortSelect UI 추가" />
     <MESSAGE value="* [ AI Agent ] AgentLoop Backend로 이관" />
-    <option name="LAST_COMMIT_MESSAGE" value="* [ AI Agent ] AgentLoop Backend로 이관" />
+    <MESSAGE value="* [ AI Agent ] AI Loop Backend로 이전" />
+    <option name="LAST_COMMIT_MESSAGE" value="* [ AI Agent ] AI Loop Backend로 이전" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

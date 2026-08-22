@@ -4,7 +4,7 @@ using UnrealAgent.Backend.Chat;
 
 namespace UnrealAgent.Frontend.Page;
 
-public partial class Chat
+public partial class Chat : IAsyncDisposable
 {
     /// <summary> 에이전트 실행 서비스 </summary>
     [Inject] private AgentRunner AgentRunner { get; set; } = null;
