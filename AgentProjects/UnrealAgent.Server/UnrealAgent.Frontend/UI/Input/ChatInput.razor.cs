@@ -58,8 +58,15 @@ public partial class ChatInput : IAsyncDisposable
     {
         if (KeyHandler is not null)
         {
-            await KeyHandler.InvokeVoidAsync("dispose");
-            await KeyHandler.DisposeAsync();
+            try
+            {
+                await KeyHandler.InvokeVoidAsync("dispose");
+                await KeyHandler.DisposeAsync();
+            }
+            catch (JSDisconnectedException)
+            {
+                // circuit이 이미 끊긴 상태(탭 닫힘/새로고침)라 JS로 정리 호출을 보낼 수 없음 — 무해하므로 무시.
+            }
         }
 
         SelfRef?.Dispose();

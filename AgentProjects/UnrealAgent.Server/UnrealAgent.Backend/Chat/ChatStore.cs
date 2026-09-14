@@ -37,7 +37,7 @@ public sealed class ChatStore
             }
             case ChatEvent.Thinking { Content: var Content }:
             {
-                if (Messages.Count > 0 && Messages[^1] is ChatUIMessage.Assistant)
+                if (Messages.Count > 0 && Messages[^1] is ChatUIMessage.Thinking { bIsCompleted: false })
                     Messages[^1] = Messages[^1].Append(Content);
                 else
                 {
