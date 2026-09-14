@@ -15,14 +15,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a24f1e12-9561-45e1-95fe-6ed92ee40354" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/AssistantMessage.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/AssistantMessage.razor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/SystemMessage.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/SystemMessage.razor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealAgent.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealAgent.Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Backend/Chat/ChatStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Backend/Chat/ChatStore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/Page/Chat.razor" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/Page/Chat.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/ChatMessages.razor" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/ChatMessages.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/ChatMessages.razor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/ChatMessages.razor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Input/ChatInput.razor" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Input/ChatInput.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Input/ChatInput.razor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Input/ChatInput.razor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Input/EffortSelector.razor" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Input/EffortSelector.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Input/ModelSelector.razor" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Input/ModelSelector.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/MessageBubble.razor" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/UI/Messages/MessageBubble.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnrealAgent.Frontend/wwwroot/js/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/UnrealAgent.Frontend/wwwroot/js/chat.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,61 +106,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000000092737" />
-      <entry key="MS500" value="1.0068180370363145" />
-      <entry key="S2" value="1.5121243199345549" />
-      <entry key="S5" value="2.589582445575905" />
-      <entry key="S10" value="3.4682151255545524" />
-      <entry key="S30" value="4.428914093577521" />
-      <entry key="S60" value="5.3321588228079495" />
-      <entry key="M2" value="8.170043909488367" />
-      <entry key="M5" value="15.850358357541179" />
-      <entry key="M10" value="25.42920135122418" />
-      <entry key="M15" value="39.141178577459215" />
-      <entry key="M30" value="91.83657163503716" />
-      <entry key="H1" value="199.53066273824126" />
-      <entry key="H2" value="441.2387663182521" />
-      <entry key="H4" value="999.8518044505543" />
-      <entry key="D1" value="3492.4002483735762" />
-      <entry key="W1" value="4672.633546055851" />
+      <entry key="MS100" value="1.2923389690716364E-57" />
+      <entry key="MS500" value="5.225383627305398E-12" />
+      <entry key="S2" value="0.0031269566680714326" />
+      <entry key="S5" value="0.19095876174942972" />
+      <entry key="S10" value="0.7559362571734893" />
+      <entry key="S30" value="1.8943350201166547" />
+      <entry key="S60" value="2.3843522957359324" />
+      <entry key="M2" value="2.801127164712582" />
+      <entry key="M5" value="7.016343074198837" />
+      <entry key="M10" value="18.601596715747828" />
+      <entry key="M15" value="32.01720120169048" />
+      <entry key="M30" value="80.93431932281774" />
+      <entry key="H1" value="185.94442636113249" />
+      <entry key="H2" value="423.6295373792197" />
+      <entry key="H4" value="976.3787792046699" />
+      <entry key="D1" value="3489.843895726267" />
+      <entry key="W1" value="4693.9725685111935" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.6725935261549707E-125" />
-      <entry key="MS500" value="1.421220259204104E-25" />
-      <entry key="S2" value="1.3387762712852748E-6" />
-      <entry key="S5" value="0.009847905956826653" />
-      <entry key="S10" value="0.19681423996428263" />
-      <entry key="S30" value="1.474515814288926" />
-      <entry key="S60" value="2.6144382113222293" />
-      <entry key="M2" value="4.0856666577402665" />
-      <entry key="M5" value="7.101820566583863" />
-      <entry key="M10" value="10.04037584994666" />
-      <entry key="M15" value="12.339784299716205" />
-      <entry key="M30" value="18.878255641419617" />
-      <entry key="H1" value="35.43165780828545" />
-      <entry key="H2" value="83.83713095817421" />
-      <entry key="H4" value="202.09034305333304" />
-      <entry key="D1" value="718.2590832938365" />
-      <entry key="W1" value="960.7991443694269" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0000000000401208" />
+      <entry key="S60" value="1.0000136376158195" />
+      <entry key="M2" value="1.0093313174696164" />
+      <entry key="M5" value="1.6235075392738723" />
+      <entry key="M10" value="3.974993199983146" />
+      <entry key="M15" value="6.484430948736114" />
+      <entry key="M30" value="13.585598273328884" />
+      <entry key="H1" value="29.929936082904195" />
+      <entry key="H2" value="76.75554173392014" />
+      <entry key="H4" value="193.1031832515968" />
+      <entry key="D1" value="713.2174776431199" />
+      <entry key="W1" value="960.6404290077841" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.005961950035002352" />
-      <entry key="MS500" value="0.3599509320022365" />
-      <entry key="S2" value="1.110978156351356" />
-      <entry key="S5" value="2.2502671507665326" />
-      <entry key="S10" value="3.3853851188761306" />
-      <entry key="S30" value="5.726331073883106" />
-      <entry key="S60" value="7.823438033003931" />
-      <entry key="M2" value="12.164675310482133" />
-      <entry key="M5" value="22.79785817578251" />
-      <entry key="M10" value="35.142082751572495" />
-      <entry key="M15" value="51.07137821088868" />
-      <entry key="M30" value="110.29787436791467" />
-      <entry key="H1" value="234.6490674562541" />
-      <entry key="H2" value="524.8695256359058" />
-      <entry key="H4" value="1201.8066418524993" />
-      <entry key="D1" value="4210.61794677097" />
-      <entry key="W1" value="5633.425568213163" />
+      <entry key="MS100" value="0.0017602548097867773" />
+      <entry key="MS500" value="0.2812646211746763" />
+      <entry key="S2" value="0.730961412359261" />
+      <entry key="S5" value="1.0619642501025637" />
+      <entry key="S10" value="1.675113632802519" />
+      <entry key="S30" value="2.857323850078333" />
+      <entry key="S60" value="3.36373789707898" />
+      <entry key="M2" value="3.7991782902126734" />
+      <entry key="M5" value="8.62038775308204" />
+      <entry key="M10" value="22.47522236429118" />
+      <entry key="M15" value="38.31610916015986" />
+      <entry key="M30" value="94.23977921572957" />
+      <entry key="H1" value="215.61736858292187" />
+      <entry key="H2" value="500.1979498029354" />
+      <entry key="H4" value="1169.3528172104427" />
+      <entry key="D1" value="4203.020279012032" />
+      <entry key="W1" value="5654.6058756336815" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -261,7 +262,8 @@
       <workItem from="1787192671101" duration="5244000" />
       <workItem from="1787203215181" duration="6535000" />
       <workItem from="1787285276402" duration="8478000" />
-      <workItem from="1787390015070" duration="1756000" />
+      <workItem from="1787390015070" duration="1804000" />
+      <workItem from="1789364691890" duration="2700000" />
     </task>
     <task id="LOCAL-00001" summary="[ AI Agent ] System Prompt 제작">
       <option name="closed" value="true" />
@@ -407,7 +409,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787392885307</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="* [ AI Agent ] assistantMessage Frontend 작업">
+      <option name="closed" value="true" />
+      <created>1787393371481</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1787393371481</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,7 +455,8 @@
     <MESSAGE value="* [ AI Agent ] AgentLoop Backend로 이관" />
     <MESSAGE value="* [ AI Agent ] AI Loop Backend로 이전" />
     <MESSAGE value="* [ AI Agent ] UserMessage frontend" />
-    <option name="LAST_COMMIT_MESSAGE" value="* [ AI Agent ] UserMessage frontend" />
+    <MESSAGE value="* [ AI Agent ] assistantMessage Frontend 작업" />
+    <option name="LAST_COMMIT_MESSAGE" value="* [ AI Agent ] assistantMessage Frontend 작업" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

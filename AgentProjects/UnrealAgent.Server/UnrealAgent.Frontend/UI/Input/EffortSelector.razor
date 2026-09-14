@@ -5,7 +5,7 @@
         @foreach (var Level in Levels)
         {
             var bIsSelected = Settings.Effort == Level.Value;
-            <button @onclick="() => SelectEffort(Level.Value)"
+            <button type="button" @onclick="() => SelectEffort(Level.Value)"
                     class="relative group/btn px-1.5 py-0.5 rounded-[1px] text-[9px] transition-colors @(bIsSelected ? "font-bold bg-[#0070e0] text-white shadow-sm ring-1 ring-white/10" : "font-medium text-[#555] hover:text-[#ccc] hover:bg-[#222]")">
                 @Level.Label
                 <!-- 툴팁입니다. -->
